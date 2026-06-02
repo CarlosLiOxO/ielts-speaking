@@ -2,17 +2,21 @@
  * AI 评分反馈面板
  * 展示 Mimo 的口语评分结果
  */
-import { useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { Sparkles, ChevronDown, ChevronUp, Target, Wand2 } from 'lucide-react';
 import { getAIFeedback } from '../services/ai';
 import { AIRequestStatus } from './AIRequestStatus';
 import { AppButton, IconButton } from './ui';
+
+export type FeedbackStatus = 'idle' | 'loading' | 'success' | 'error';
 
 interface AIFeedbackPanelProps {
   question: string;
   transcript: string;
   part: 'part1' | 'part2' | 'part3';
   preloadedFeedback?: string;
+  autoRequest?: boolean;
+  onStatusChange?: (status: FeedbackStatus) => void;
   onFeedbackReceived?: (feedback: string) => void;
 }
 
@@ -33,33 +37,52 @@ export function AIFeedbackPanel({
   transcript,
   part,
   preloadedFeedback,
+  autoRequest = false,
+  onStatusChange,
   onFeedbackReceived,
 }: AIFeedbackPanelProps) {
   const [feedback, setFeedback] = useState(preloadedFeedback || '');
   const [loading, setLoading] = useState(false);
   const [expanded, setExpanded] = useState(true);
   const [error, setError] = useState('');
+  const requestedKeyRef = useRef('');
   const band = extractBand(feedback);
 
-  const requestFeedback = async () => {
+  const requestFeedback = useCallback(async () => {
     if (!transcript.trim()) {
       setError('没有转写文本可以评分');
+      onStatusChange?.('error');
       return;
     }
 
     setLoading(true);
     setError('');
+    onStatusChange?.('loading');
 
     try {
       const result = await getAIFeedback('', question, transcript, part);
       setFeedback(result);
       onFeedbackReceived?.(result);
+      onStatusChange?.('success');
     } catch (err) {
       setError(err instanceof Error ? err.message : '获取评分失败，请检查网络和 API Key');
+      onStatusChange?.('error');
     } finally {
       setLoading(false);
     }
-  };
+  }, [onFeedbackReceived, onStatusChange, part, question, transcript]);
+
+  useEffect(() => {
+    if (preloadedFeedback) {
+      onStatusChange?.('success');
+      return;
+    }
+    if (!autoRequest || !transcript.trim() || feedback || loading) return;
+    const requestKey = `${part}:${question}:${transcript}`;
+    if (requestedKeyRef.current === requestKey) return;
+    requestedKeyRef.current = requestKey;
+    void requestFeedback();
+  }, [autoRequest, feedback, loading, onStatusChange, part, preloadedFeedback, question, requestFeedback, transcript]);
 
   if (!transcript.trim()) return null;
 

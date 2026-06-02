@@ -8,11 +8,11 @@ import { Volume2, ChevronRight, Clock, BookOpen, Lightbulb, Shuffle } from 'luci
 import questionsData from '../data/questions.json';
 import { useAppStore } from '../stores/useAppStore';
 import { RecorderPanel } from '../components/RecorderPanel';
-import { AIFeedbackPanel } from '../components/AIFeedbackPanel';
+import { AIFeedbackPanel, type FeedbackStatus } from '../components/AIFeedbackPanel';
 import { Timer } from '../components/Timer';
 import { AppButton, IconButton, PageContent, PageHeader, PageShell, PromptCard, SegmentedFilter } from '../components/ui';
 import { saveRecord, updateRecordFeedback } from '../services/db';
-import { preloadSpeech as preloadMimoSpeech, retryLastSpeech, speak as speakMimo } from '../services/tts';
+import { preloadSpeechQueue, retryLastSpeech, speak as speakMimo } from '../services/tts';
 import { useTTSStatus } from '../hooks/useTTSStatus';
 import { AIRequestStatus } from '../components/AIRequestStatus';
 import { generateKeywordHints } from '../services/ai';
@@ -40,12 +40,13 @@ export function PracticePart23Page() {
   const [part3Transcript, setPart3Transcript] = useState('');
   const [part2RecordId, setPart2RecordId] = useState<number | null>(null);
   const [part3RecordId, setPart3RecordId] = useState<number | null>(null);
+  const [part2FeedbackStatus, setPart2FeedbackStatus] = useState<FeedbackStatus>('idle');
+  const [part3FeedbackStatus, setPart3FeedbackStatus] = useState<FeedbackStatus>('idle');
   const [prepRunning, setPrepRunning] = useState(false);
   const [filter, setFilter] = useState<'all' | '保留题' | '旧题'>('all');
 
   const filteredCards = filter === 'all' ? allCards : allCards.filter(c => c.category === filter);
   const speak = (text: string) => speakMimo(text, { source: TTS_SOURCE });
-  const preloadSpeech = (text: string) => preloadMimoSpeech(text, { source: TTS_SOURCE });
 
   /** 生成 Part 2 关键词提示 */
   const generateHintsForCard = async (card: Part23Card & { category: string }) => {
@@ -73,15 +74,19 @@ export function PracticePart23Page() {
     setPart3Transcript('');
     setPart2RecordId(null);
     setPart3RecordId(null);
+    setPart2FeedbackStatus('idle');
+    setPart3FeedbackStatus('idle');
     setPart3Index(0);
     setStep('prep');
     setPrepRunning(true);
 
-    // 播报并预加载题目
     if (settings.enableTTS && card.part2) {
-      preloadSpeech(card.part2.prompt);
+      preloadSpeechQueue([
+        card.part2.prompt,
+        card.part3Questions[0]?.question,
+        card.part3Questions[1]?.question,
+      ], { source: TTS_SOURCE });
       speak(card.part2.prompt);
-      if (card.part3Questions[0]) preloadSpeech(card.part3Questions[0].question);
     }
 
     void generateHintsForCard(card);
@@ -101,6 +106,7 @@ export function PracticePart23Page() {
     duration: number;
   }) => {
     setPart2Transcript(data.transcript);
+    setPart2FeedbackStatus('idle');
 
     if (selectedCard?.part2) {
       const recordId = await saveRecord({
@@ -129,6 +135,7 @@ export function PracticePart23Page() {
     duration: number;
   }) => {
     setPart3Transcript(data.transcript);
+    setPart3FeedbackStatus('idle');
 
     if (selectedCard) {
       const q = selectedCard.part3Questions[part3Index];
@@ -152,6 +159,17 @@ export function PracticePart23Page() {
 
   const currentPart2 = selectedCard?.part2;
   const currentPart3Q = selectedCard?.part3Questions[part3Index];
+  const canContinuePart3 = Boolean(part2Transcript && part2FeedbackStatus === 'success');
+  const canAdvancePart3 = Boolean(part3Transcript && part3FeedbackStatus === 'success');
+  const getAdvanceHint = (transcript: string, status: FeedbackStatus) => !transcript
+    ? '请先完成录音'
+    : status === 'loading'
+      ? 'AI 评分生成中…'
+      : status === 'error'
+        ? '评分失败，请重新评分'
+        : status !== 'success'
+          ? '请先获取 AI 评分'
+          : '';
 
   return (
     <PageShell>
@@ -304,6 +322,8 @@ export function PracticePart23Page() {
               question={currentPart2.prompt}
               transcript={part2Transcript}
               part="part2"
+              autoRequest
+              onStatusChange={setPart2FeedbackStatus}
               onFeedbackReceived={(feedback) => {
                 if (part2RecordId) void updateRecordFeedback(part2RecordId, feedback);
               }}
@@ -318,22 +338,31 @@ export function PracticePart23Page() {
               </button>
               {selectedCard.part3Questions.length > 0 && (
                 <button
+                  disabled={!canContinuePart3}
                   onClick={() => {
+                    if (!canContinuePart3) return;
                     setPart3Index(0);
+                    setPart3Transcript('');
+                    setPart3FeedbackStatus('idle');
                     setStep('part3');
                     if (settings.enableTTS) {
-                      preloadSpeech(selectedCard.part3Questions[0].question);
+                      preloadSpeechQueue([
+                        selectedCard.part3Questions[0].question,
+                        selectedCard.part3Questions[1]?.question,
+                      ], { source: TTS_SOURCE });
                       speak(selectedCard.part3Questions[0].question);
-                      if (selectedCard.part3Questions[1]) preloadSpeech(selectedCard.part3Questions[1].question);
                     }
                   }}
-                  className="flex-1 py-3 bg-green-500 hover:bg-green-600 text-white rounded-xl font-medium flex items-center justify-center gap-2"
+                  className="flex-1 py-3 bg-green-500 hover:bg-green-600 disabled:opacity-45 disabled:cursor-not-allowed text-white rounded-xl font-medium flex items-center justify-center gap-2"
                 >
                   继续 Part 3
                   <ChevronRight size={18} />
                 </button>
               )}
             </div>
+            {!canContinuePart3 && (
+              <p className="text-center text-xs text-slate-400">{getAdvanceHint(part2Transcript, part2FeedbackStatus)}</p>
+            )}
           </div>
         )}
 
@@ -382,6 +411,8 @@ export function PracticePart23Page() {
               question={currentPart3Q.question}
               transcript={part3Transcript}
               part="part3"
+              autoRequest
+              onStatusChange={setPart3FeedbackStatus}
               onFeedbackReceived={(feedback) => {
                 if (part3RecordId) void updateRecordFeedback(part3RecordId, feedback);
               }}
@@ -401,27 +432,41 @@ export function PracticePart23Page() {
               </button>
               {part3Index < selectedCard.part3Questions.length - 1 ? (
                 <button
+                  disabled={!canAdvancePart3}
                   onClick={() => {
+                    if (!canAdvancePart3) return;
                     const next = part3Index + 1;
                     setPart3Index(next);
+                    setPart3Transcript('');
+                    setPart3FeedbackStatus('idle');
                     setStep('part3');
                     if (settings.enableTTS) {
-                      preloadSpeech(selectedCard.part3Questions[next].question);
+                      preloadSpeechQueue([
+                        selectedCard.part3Questions[next].question,
+                        selectedCard.part3Questions[next + 1]?.question,
+                      ], { source: TTS_SOURCE });
                       speak(selectedCard.part3Questions[next].question);
-                      if (selectedCard.part3Questions[next + 1]) preloadSpeech(selectedCard.part3Questions[next + 1].question);
                     }
                   }}
-                  className="flex-1 py-3 bg-green-500 hover:bg-green-600 text-white rounded-xl font-medium flex items-center justify-center gap-2"
+                  className="flex-1 py-3 bg-green-500 hover:bg-green-600 disabled:opacity-45 disabled:cursor-not-allowed text-white rounded-xl font-medium flex items-center justify-center gap-2"
                 >
                   下一题 <ChevronRight size={18} />
                 </button>
               ) : (
-                <button onClick={() => setStep('select')}
-                  className="flex-1 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-xl font-medium">
+                <button
+                  disabled={!canAdvancePart3}
+                  onClick={() => {
+                    if (!canAdvancePart3) return;
+                    setStep('select');
+                  }}
+                  className="flex-1 py-3 bg-blue-500 hover:bg-blue-600 disabled:opacity-45 disabled:cursor-not-allowed text-white rounded-xl font-medium">
                   完成练习
                 </button>
               )}
             </div>
+            {!canAdvancePart3 && (
+              <p className="text-center text-xs text-slate-400">{getAdvanceHint(part3Transcript, part3FeedbackStatus)}</p>
+            )}
           </div>
         )}
       </PageContent>

@@ -143,6 +143,13 @@ export function preloadSpeech(text: string, options: TTSOptions = {}): void {
   });
 }
 
+export function preloadSpeechQueue(texts: Array<string | undefined>, options: TTSOptions = {}): void {
+  const uniqueTexts = Array.from(new Set(texts.map(text => text?.trim()).filter(Boolean))) as string[];
+  uniqueTexts.forEach((text, index) => {
+    setTimeout(() => preloadSpeech(text, options), index * 150);
+  });
+}
+
 /**
  * 播报文字（考官语音）
  * @param text 要播报的文字

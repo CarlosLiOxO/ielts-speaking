@@ -7,10 +7,10 @@ import { Shuffle, Volume2, BookOpen, Flag, ChevronRight, ChevronLeft } from 'luc
 import questionsData from '../data/questions.json';
 import { useAppStore } from '../stores/useAppStore';
 import { RecorderPanel } from '../components/RecorderPanel';
-import { AIFeedbackPanel } from '../components/AIFeedbackPanel';
+import { AIFeedbackPanel, type FeedbackStatus } from '../components/AIFeedbackPanel';
 import { AppButton, IconButton, PageContent, PageHeader, PageShell, PromptCard, SegmentedFilter } from '../components/ui';
 import { saveRecord, updateRecordFeedback } from '../services/db';
-import { preloadSpeech, retryLastSpeech, speak } from '../services/tts';
+import { preloadSpeechQueue, retryLastSpeech, speak } from '../services/tts';
 import { useTTSStatus } from '../hooks/useTTSStatus';
 import { AIRequestStatus } from '../components/AIRequestStatus';
 import type { Part1Topic, SpeechStats } from '../types';
@@ -43,6 +43,7 @@ export function PracticePart1Page() {
   const [selectedTopic, setSelectedTopic] = useState<(Part1Topic & { category: string }) | null>(null);
   const [questionIndex, setQuestionIndex] = useState(0);
   const [practiceState, setPracticeState] = useState<QuestionState | null>(null);
+  const [feedbackStatus, setFeedbackStatus] = useState<FeedbackStatus>('idle');
   const [filter, setFilter] = useState<'all' | '必考题' | '保留题' | '旧题'>('all');
   const [weakTopics, setWeakTopics] = useState<Set<string>>(new Set());
 
@@ -54,11 +55,17 @@ export function PracticePart1Page() {
   const startPractice = useCallback((topic: Part1Topic & { category: string }, qIdx: number) => {
     setSelectedTopic(topic);
     setQuestionIndex(qIdx);
+    setPracticeState(null);
+    setFeedbackStatus('idle');
     setStep('question');
 
     const questionText = topic.questions[qIdx].question;
     if (settings.enableTTS) {
-      preloadSpeech(questionText, { source: TTS_SOURCE });
+      preloadSpeechQueue([
+        questionText,
+        topic.questions[(qIdx + 1) % topic.questions.length]?.question,
+        topic.questions[(qIdx + 2) % topic.questions.length]?.question,
+      ], { source: TTS_SOURCE });
       speak(questionText, { source: TTS_SOURCE });
     }
   }, [settings.enableTTS]);
@@ -109,6 +116,7 @@ export function PracticePart1Page() {
     });
 
     setPracticeState({ ...state, recordId });
+    setFeedbackStatus('idle');
     setStep('result');
   };
 
@@ -120,6 +128,16 @@ export function PracticePart1Page() {
   };
 
   const currentQuestion = selectedTopic?.questions[questionIndex];
+  const canAdvance = Boolean(practiceState?.transcript && feedbackStatus === 'success');
+  const advanceHint = !practiceState?.transcript
+    ? '请先完成录音'
+    : feedbackStatus === 'loading'
+      ? 'AI 评分生成中…'
+      : feedbackStatus === 'error'
+        ? '评分失败，请重新评分'
+        : feedbackStatus !== 'success'
+          ? '请先获取 AI 评分'
+          : '';
 
   return (
     <PageShell>
@@ -198,13 +216,14 @@ export function PracticePart1Page() {
               </span>
               <div className="flex gap-2">
                 <IconButton
-                  label="上一题"
-                  disabled={questionIndex === 0}
+                  label="上一题需先完成当前题录音和评分"
+                  disabled
                   onClick={() => questionIndex > 0 && startPractice(selectedTopic, questionIndex - 1)}
                   icon={<ChevronLeft size={16} aria-hidden="true" />}
                 />
                 <IconButton
-                  label="下一题"
+                  label="下一题需先完成当前题录音和评分"
+                  disabled
                   onClick={() => startPractice(selectedTopic, (questionIndex + 1) % selectedTopic.questions.length)}
                   icon={<ChevronRight size={16} aria-hidden="true" />}
                 />
@@ -256,6 +275,8 @@ export function PracticePart1Page() {
               question={currentQuestion.question}
               transcript={practiceState.transcript}
               part="part1"
+              autoRequest
+              onStatusChange={setFeedbackStatus}
               onFeedbackReceived={(fb) => {
                 setPracticeState(prev => prev ? { ...prev, aiFeedback: fb } : prev);
                 if (practiceState.recordId) void updateRecordFeedback(practiceState.recordId, fb);
@@ -270,11 +291,14 @@ export function PracticePart1Page() {
               <AppButton onClick={() => startPractice(practiceState.topic, practiceState.questionIndex)} variant="secondary" size="lg" className="w-full">
                 重新练习
               </AppButton>
-              <AppButton onClick={goNextQuestion} variant="success" size="lg" className="w-full">
+              <AppButton onClick={goNextQuestion} variant="success" size="lg" className="w-full" disabled={!canAdvance}>
                 下一题
                 <ChevronRight size={18} aria-hidden="true" />
               </AppButton>
             </div>
+            {!canAdvance && advanceHint && (
+              <p className="text-center text-xs text-slate-400">{advanceHint}</p>
+            )}
 
             {/* 标记薄弱 */}
             <button

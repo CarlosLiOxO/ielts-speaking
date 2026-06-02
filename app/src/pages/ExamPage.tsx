@@ -7,9 +7,10 @@ import { Play, CheckCircle } from 'lucide-react';
 import questionsData from '../data/questions.json';
 import { useAppStore } from '../stores/useAppStore';
 import { RecorderPanel } from '../components/RecorderPanel';
+import { AIFeedbackPanel, type FeedbackStatus } from '../components/AIFeedbackPanel';
 import { Timer } from '../components/Timer';
-import { saveRecord } from '../services/db';
-import { preloadSpeech as preloadMimoSpeech, retryLastSpeech, speak as speakMimo } from '../services/tts';
+import { saveRecord, updateRecordFeedback } from '../services/db';
+import { preloadSpeech as preloadMimoSpeech, preloadSpeechQueue, retryLastSpeech, speak as speakMimo } from '../services/tts';
 import { useTTSStatus } from '../hooks/useTTSStatus';
 import { AIRequestStatus } from '../components/AIRequestStatus';
 import { PageContent, PageHeader, PageShell } from '../components/ui';
@@ -23,7 +24,18 @@ type ExamStep =
   | 'part2-prep'
   | 'part2-speaking'
   | 'part3-question'
+  | 'feedback'
   | 'complete';
+
+type ExamFeedbackAction = 'next-part1' | 'start-part2' | 'start-part3' | 'next-part3' | 'complete';
+
+interface PendingExamFeedback {
+  part: 'part1' | 'part2' | 'part3';
+  question: string;
+  transcript: string;
+  recordId: number;
+  action: ExamFeedbackAction;
+}
 
 const allPart1Topics = [
   ...questionsData.part1.必考题,
@@ -72,6 +84,8 @@ export function ExamPage() {
   const [part3Index, setPart3Index] = useState(0);
   const [prepRunning, setPrepRunning] = useState(false);
   const [completedParts, setCompletedParts] = useState<string[]>([]);
+  const [pendingFeedback, setPendingFeedback] = useState<PendingExamFeedback | null>(null);
+  const [feedbackStatus, setFeedbackStatus] = useState<FeedbackStatus>('idle');
 
   const isStressMode = settings.practiceMode === 'stress';
   const isWarmupMode = settings.practiceMode === 'warmup';
@@ -79,9 +93,66 @@ export function ExamPage() {
   const currentPart1Q = exam.part1Questions[part1Index];
   const currentPart3Q = exam.part3Questions[part3Index];
 
-  /** 预加载题目音频 */
-  const preloadQuestion = (text: string | undefined) => {
-    if (settings.enableTTS && text) preloadMimoSpeech(text, { source: TTS_SOURCE });
+  const preloadQuestions = (texts: Array<string | undefined>) => {
+    if (settings.enableTTS) preloadSpeechQueue(texts, { source: TTS_SOURCE });
+  };
+
+  const openFeedback = (feedback: PendingExamFeedback) => {
+    setPendingFeedback(feedback);
+    setFeedbackStatus('idle');
+    setStep('feedback');
+  };
+
+  const continueAfterFeedback = () => {
+    if (!pendingFeedback || feedbackStatus !== 'success') return;
+    const action = pendingFeedback.action;
+    setPendingFeedback(null);
+    setFeedbackStatus('idle');
+
+    if (action === 'next-part1') {
+      const next = part1Index + 1;
+      setPart1Index(next);
+      setStep('part1-question');
+      preloadQuestions([
+        exam.part1Questions[next].question,
+        exam.part1Questions[next + 1]?.question,
+        exam.part1Questions[next + 2]?.question,
+      ]);
+      setTimeout(() => speakQuestion(exam.part1Questions[next].question), 500);
+      return;
+    }
+
+    if (action === 'start-part2') {
+      setCompletedParts(p => [...p, 'part1']);
+      setStep('part2-prep');
+      setPrepRunning(true);
+      if (exam.card.part2) {
+        preloadQuestions([exam.card.part2.prompt, exam.part3Questions[0]?.question, exam.part3Questions[1]?.question]);
+        speakQuestion(exam.card.part2.prompt);
+      }
+      return;
+    }
+
+    if (action === 'start-part3') {
+      setCompletedParts(p => [...p, 'part2']);
+      setPart3Index(0);
+      setStep('part3-question');
+      preloadQuestions([exam.part3Questions[0]?.question, exam.part3Questions[1]?.question]);
+      if (exam.part3Questions.length > 0) speakQuestion(exam.part3Questions[0].question);
+      return;
+    }
+
+    if (action === 'next-part3') {
+      const next = part3Index + 1;
+      setPart3Index(next);
+      setStep('part3-question');
+      preloadQuestions([exam.part3Questions[next].question, exam.part3Questions[next + 1]?.question]);
+      setTimeout(() => speakQuestion(exam.part3Questions[next].question), 500);
+      return;
+    }
+
+    setCompletedParts(p => [...p, 'part3']);
+    setStep('complete');
   };
 
   /** 播报当前题目 */
@@ -98,7 +169,7 @@ export function ExamPage() {
     stats: SpeechStats | null;
     duration: number;
   }) => {
-    await saveRecord({
+    const recordId = await saveRecord({
       date: new Date().toISOString(),
       part: 'part1',
       topicOrTitle: currentPart1Q.topic,
@@ -112,19 +183,13 @@ export function ExamPage() {
     });
 
     const next = part1Index + 1;
-    if (next < exam.part1Questions.length) {
-      setPart1Index(next);
-      preloadQuestion(exam.part1Questions[next + 1]?.question);
-      setTimeout(() => speakQuestion(exam.part1Questions[next].question), 500);
-    } else {
-      setCompletedParts(p => [...p, 'part1']);
-      setStep('part2-prep');
-      setPrepRunning(true);
-      if (exam.card.part2) {
-        preloadQuestion(exam.part3Questions[0]?.question);
-        speakQuestion(exam.card.part2.prompt);
-      }
-    }
+    openFeedback({
+      part: 'part1',
+      question: currentPart1Q.question,
+      transcript: data.transcript,
+      recordId,
+      action: next < exam.part1Questions.length ? 'next-part1' : 'start-part2',
+    });
   };
 
   const handlePart2Complete = async (data: {
@@ -134,7 +199,7 @@ export function ExamPage() {
     duration: number;
   }) => {
     if (exam.card.part2) {
-      await saveRecord({
+      const recordId = await saveRecord({
         date: new Date().toISOString(),
         part: 'part2',
         topicOrTitle: exam.card.titleZh,
@@ -146,12 +211,15 @@ export function ExamPage() {
         speechRate: data.stats?.speechRate || 0,
         pauseCount: data.stats?.pauseCount || 0,
       });
-    }
 
-    setCompletedParts(p => [...p, 'part2']);
-    setStep('part3-question');
-    preloadQuestion(exam.part3Questions[1]?.question);
-    if (exam.part3Questions.length > 0) speakQuestion(exam.part3Questions[0].question);
+      openFeedback({
+        part: 'part2',
+        question: exam.card.part2.prompt,
+        transcript: data.transcript,
+        recordId,
+        action: 'start-part3',
+      });
+    }
   };
 
   const handlePart3Complete = async (data: {
@@ -160,7 +228,7 @@ export function ExamPage() {
     stats: SpeechStats | null;
     duration: number;
   }) => {
-    await saveRecord({
+    const recordId = await saveRecord({
       date: new Date().toISOString(),
       part: 'part3',
       topicOrTitle: exam.card.titleZh,
@@ -174,14 +242,13 @@ export function ExamPage() {
     });
 
     const next = part3Index + 1;
-    if (next < exam.part3Questions.length) {
-      setPart3Index(next);
-      preloadQuestion(exam.part3Questions[next + 1]?.question);
-      setTimeout(() => speakQuestion(exam.part3Questions[next].question), 500);
-    } else {
-      setCompletedParts(p => [...p, 'part3']);
-      setStep('complete');
-    }
+    openFeedback({
+      part: 'part3',
+      question: currentPart3Q?.question || '',
+      transcript: data.transcript,
+      recordId,
+      action: next < exam.part3Questions.length ? 'next-part3' : 'complete',
+    });
   };
 
   const modeLabel = isStressMode ? '压力模式' : isWarmupMode ? '热身模式' : '标准模式';
@@ -221,6 +288,30 @@ export function ExamPage() {
         {ttsStatus.status === 'playing' && <AIRequestStatus type="speaking" message={ttsStatus.message} />}
         {ttsStatus.status === 'error' && <AIRequestStatus type="error" message={ttsStatus.message} actionLabel="重试" onAction={retryLastSpeech} />}
 
+        {step === 'feedback' && pendingFeedback && (
+          <div className="flex flex-col gap-4">
+            <div className="rounded-2xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-slate-900">
+              <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-blue-500">{pendingFeedback.part.toUpperCase()} 评分后继续</p>
+              <p className="text-sm font-medium text-slate-900 dark:text-white">{pendingFeedback.question}</p>
+            </div>
+            <AIFeedbackPanel
+              question={pendingFeedback.question}
+              transcript={pendingFeedback.transcript}
+              part={pendingFeedback.part}
+              autoRequest
+              onStatusChange={setFeedbackStatus}
+              onFeedbackReceived={(feedback) => void updateRecordFeedback(pendingFeedback.recordId, feedback)}
+            />
+            <button
+              disabled={feedbackStatus !== 'success'}
+              onClick={continueAfterFeedback}
+              className="w-full rounded-xl bg-green-500 py-3 font-medium text-white hover:bg-green-600 disabled:cursor-not-allowed disabled:opacity-45"
+            >
+              {feedbackStatus === 'loading' ? 'AI 评分生成中…' : feedbackStatus === 'error' ? '请重新评分后继续' : '继续下一步'}
+            </button>
+          </div>
+        )}
+
         {/* ===== 开始介绍 ===== */}
         {step === 'intro' && (
           <div className="text-center py-12">
@@ -235,7 +326,11 @@ export function ExamPage() {
             <button
               onClick={() => {
                 setStep('part1-question');
-                preloadQuestion(exam.part1Questions[1]?.question);
+                preloadQuestions([
+                  exam.part1Questions[0]?.question,
+                  exam.part1Questions[1]?.question,
+                  exam.part1Questions[2]?.question,
+                ]);
                 speakQuestion(exam.part1Questions[0].question);
               }}
               className="flex items-center gap-2 bg-blue-500 hover:bg-blue-600 text-white px-8 py-4 rounded-2xl font-semibold text-lg mx-auto transition-colors"
