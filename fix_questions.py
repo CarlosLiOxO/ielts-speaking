@@ -7,6 +7,17 @@
 """
 import json
 import re
+from pathlib import Path
+
+WORDS_PATH = Path('/usr/share/dict/words')
+EN_WORDS = set()
+if WORDS_PATH.exists():
+    EN_WORDS = {w.strip().lower() for w in WORDS_PATH.read_text(errors='ignore').splitlines() if w.strip().isalpha()}
+
+EN_WORDS.update({
+    'smartphones', 'opportunities', 'challenging', 'coursework', 'artworks',
+    'youtubers', 'macroeconomics', 'microeconomics', 'ielts', 'nowadays',
+})
 
 # ===== 整句替换（原文 → 正确文本）=====
 SENTENCE_FIXES = {
@@ -533,12 +544,164 @@ PATTERNS = [
     (r'\bl have\b', 'I have'),
     (r'\bl had\b', 'I had'),
     (r'\bl can\b', 'I can'),
+    # 截图及同类明显 OCR 断词补充
+    (r'\bn my\b', 'In my'),
+    (r'\bm y\b', 'my'), (r'\bM y\b', 'My'),
+    (r'\bw e\b', 'we'), (r'\bW e\b', 'We'),
+    (r'\bu s\b', 'us'),
+    (r'\beffecti vely\b', 'effectively'), (r'\beffect ively\b', 'effectively'),
+    (r'\boutsid e\b', 'outside'), (r'\boutsi de\b', 'outside'),
+    (r'\bfriendly\b', 'friendly'), (r'\bfriendl y\b', 'friendly'), (r'\bfriend ly\b', 'friendly'),
+    (r'\bluck y\b', 'lucky'), (r'\bclos e\b', 'close'), (r'\bbloc k\b', 'block'),
+    (r'\bnea r\b', 'near'), (r'\brestaurant s\b', 'restaurants'),
+    (r'\beffectivel y\b', 'effectively'), (r'\bquickl y\b', 'quickly'),
+    (r'\beasil y\b', 'easily'), (r'\beasie r\b', 'easier'),
+    (r'\balread y\b', 'already'), (r'\bundertoo d\b', 'understood'),
+    (r'\babl e\b', 'able'), (r'\bpracti ce\b', 'practice'), (r'\bgettin g\b', 'getting'),
+    (r'\bhal f\b', 'half'), (r'\bguidanc e\b', 'guidance'),
+    (r'\bbeyon d\b', 'beyond'), (r'\bi nsistent\b', 'insistent'),
+    (r'\bga v e\b', 'gave'), (r'\bgav e\b', 'gave'),
+    (r'\bha d\b', 'had'), (r'\bBu t\b', 'But'), (r'\bS o\b', 'So'),
+    (r'\bsa w\b', 'saw'), (r'\ban d\b', 'and'),
+    (r'\bf irs t\b', 'first'), (r'\bfirs t\b', 'first'),
+    (r'\bexperi ence\b', 'experience'), (r'\bexperien ce\b', 'experience'),
+    (r'\bmis s\b', 'miss'), (r'\bchang e\b', 'change'), (r'\bref eshing\b', 'refreshing'),
+    (r'\bcrab ishing\b', 'crab fishing'),
+    (r'\bEverythin g\b', 'Everything'), (r'\beverythin g\b', 'everything'),
+    (r'\beveni n g\b', 'evening'), (r'\benjoyin g\b', 'enjoying'),
+    (r'\bw thin\b', 'within'), (r'\bgra b\b', 'grab'),
+    (r'\bmoder n\b', 'modern'), (r'\bprosper ty\b', 'prosperity'),
+    (r'\bex h i bi t i on s\b', 'exhibitions'), (r'\bt hr o ugh\b', 'through'),
+    (r'\bmuseum s\b', 'museums'), (r'\bart if ac t s\b', 'artifacts'),
+    (r'\bY ou\b', 'You'), (r'\by ou\b', 'you'),
+    (r'\bs h o u l d\b', 'should'), (r'\bs a y\b', 'say'),
+    (r'\bf l ow e r\b', 'flower'), (r'\bf l o w e r\b', 'flower'), (r'\bm an\b', 'man'),
+    (r'\bbasicall y\b', 'basically'), (r'\bparticularl y\b', 'particularly'),
+    (r'\bunfriendl y\b', 'unfriendly'), (r'\bmountainou s\b', 'mountainous'),
+    (r'\bfocu s\b', 'focus'), (r'\bobviou s\b', 'obvious'),
+    (r'\balmos t\b', 'almost'), (r'\bdog s\b', 'dogs'),
+    (r'\bthinking s\b', 'thoughts'), (r'\bvalue\b', 'value'), (r'\bvalu e\b', 'value'),
+    (r'\bdi d\b', 'did'), (r"\bdi dn't\b", "didn't"),
+    (r'\bB y\b', 'By'), (r'\bl wouldn\b', 'I wouldn'), (r"\bl wouldn't\b", "I wouldn't"),
+    (r'\bl would\b', 'I would'), (r'\bl could\b', 'I could'), (r'\bl didn\b', 'I didn'),
+    (r'\byear s\b', 'years'), (r'\bsoft patina\b', 'soft patina'),
+    (r'\breal l y\b', 'really'),
+    (r'\bl on g\b', 'long'), (r'\bh a v e\b', 'have'), (r'\bl i v e d\b', 'lived'),
+    (r'\bbeliev e\b', 'believe'), (r'\bEve r\b', 'Ever'), (r'\beve r\b', 'ever'),
+    (r'\bcarve d\b', 'carved'), (r'\bdecide d\b', 'decided'),
+    (r'\bEngl ish\b', 'English'), (r'\bclasse s\b', 'classes'),
+    (r'\binall y\b', 'finally'), (r'\bFinall y\b', 'Finally'), (r'\bfinall y\b', 'finally'),
+    (r'\bY\s*o\s+us\s+h\s+o\s+u\s+l\s+d\s+s\s*ay\b', 'You should say'),
+    (r'\bYo\s+us\s+h\s+o\s+u\s+l\s+d\s+say\b', 'You should say'),
+    (r'\bYou\s+should\s+say\s*:\s*', 'You should say: '),
+    # 常见保留题 OCR 残留
+    (r'\bf\s+mi\s+ly-style\b', 'family-style'),
+    (r'\bcity l fe\b', 'city life'), (r'\bthe r e\b', 'there'),
+    (r'\bz e r o e ff or t\b', 'zero effort'),
+    (r'\bW h at\b', 'What'), (r'\bwa n t\b', 'want'), (r'\bc h an g e\b', 'change'),
+    (r'\bh o m e\b', 'home'), (r'\blI ma y\b', 'I may'), (r'\bl plan\b', 'I plan'),
+    (r'\bI nformation\b', 'Information'), (r'\bInternat ional\b', 'International'),
+    (r'\bTh e\b', 'The'), (r'\bworki ng\b', 'working'), (r'\bto p\b', 'top'),
+    (r'\bassi stants\b', 'assistants'), (r'\bwork s\b', 'works'),
+    (r'\bd a y\s*-\s*to\s*-\s*da y\s*w or k\b', 'day-to-day work'),
+    (r'\bhi t\b', 'hit'), (r'\bfe w\b', 'few'), (r'\br elaxed\b', 'relaxed'),
+    (r'\bg r o w in g\b', 'growing'), (r'\bwi l\b', 'will'), (r'\balot\b', 'a lot'),
+    (r'\blo t\b', 'lot'), (r'\bsaf r\b', 'safer'), (r'\ballow s\b', 'allows'),
+    (r'\bgave m e\b', 'gave me'), (r'\bhe r\b', 'her'), (r'\bl an g u a g e\b', 'language'),
+    (r'\bonce l\b', 'once I'), (r'\bwhen l\b', 'when I'), (r'\bwhere l\b', 'where I'),
+    (r'\bhelps m e\b', 'helps me'), (r'\bFo r\b', 'For'), (r'\bfri ends\b', 'friends'),
+    (r'\bsharin g\b', 'sharing'), (r'\bBut l\b', 'But I'), (r'\bi mportant\b', 'important'),
+    (r'\bWo u l d\s+you\s*l\s*e\s*n\s*d\s*m\s*one\s*y\s+to\s+your\s+for\s*i\s*e\s*n\s*d\b', 'Would you lend money to your friend'),
+    (r'\bfrien d\b', 'friend'), (r"\bdon' treall y\b", "don't really"),
+    (r'\bClea r\b', 'Clear'), (r'\bguide\b', 'guide'), (r'\brigh t\b', 'right'),
+    (r'\bpreserve\b', 'preserve'), (r'\bMuseum s\b', 'Museums'),
+    (r'\bespecial l y\b', 'especially'), (r'\bduri ng\b', 'during'), (r'\bpubli c\b', 'public'),
+    (r'\bli vel y\b', 'lively'), (r'\bga r den s\b', 'gardens'),
+    (r'\bstudent s\b', 'students'), (r'\bvisual s\b', 'visuals'), (r'\bpl aces\b', 'places'),
+    (r'\bcaf s\b', 'cafes'), (r'\busual l y\b', 'usually'), (r'\bbi t\b', 'bit'),
+    (r'\bfora\b', 'for a'), (r'\bprevents m e\b', 'prevents me'), (r'\bfeel in g\b', 'feeling'),
+    (r'\brel ax\b', 'relax'), (r'\bli ttl e\b', 'little'),
+    (r'\bs i mp l e t h in g s\b', 'simple things'), (r'\bd a i l y l if e\b', 'daily life'),
+    (r'\bmakes m e\b', 'makes me'), (r'\bfini shing\b', 'finishing'),
+    (r'\bsatisfact ion\b', 'satisfaction'),
+    # 严重连续单字母 OCR 残留
+    (r'\be\s+x\s+h\s+i\s+bit\s+i\s+on\s+s\s+and\s+a\s+r\s+t\s+if\s+ac\s+t\s+s\b', 'exhibitions and artifacts'),
+    (r'\bthe\s+i\s+r\s+e\s+mo\s+t\s+i\s+on\s+s\b', 'their emotions'),
+    (r'\bvir\s+t\s+u\s+e\b', 'virtue'),
+    (r'\bS\s+t\s+a\s+y\s+U\s+p\s+L\s+at\s+e\b', 'Stay Up Late'),
+    (r'\bM\s+ak\s+i\s+ng\s+a\s+L\s+i\s+st\b', 'Making a List'),
+    (r'\bM\s+o\s+b\s+il\s+e\s+P\s+h\s+one\b', 'Mobile Phone'),
+    (r'\bt\s+h\s+i\s+nk\b', 'think'), (r'\bT\s+e\s+c\s+h\s+n\s+o\s+l\s+o\s+g\s+y\b', 'Technology'),
+    (r'\ba\s+l\s+o\s+t\b', 'a lot'), (r'\bf\s+nction\s+s\b', 'functions'),
+    (r'\bd\s+i\s+d\s+w\s+it\s+h\b', 'did with'),
+    (r'\bd\s+i\s+v\s+i\s+d\s+u\s+a\s+l\s+s\b', 'individuals'),
+    (r'\bs\s+c\s+i\s+e\s+n\s+t\s+if\s+i\s+c\s+r\s+e\s+s\s+e\s+a\s+r\s+c\s+h\b', 'scientific research'),
+    (r'\be\s+n\s+g\s+ag\s+in\s+g\b', 'engaging'),
+    (r'\bthe\s+i\s+r\s+f\s+a\s+u\s+l\s+t\s+s\b', 'their faults'),
+    (r'\bw\s+o\s+m\s+e\s+n\b', 'women'), (r'\bme\s+n\b', 'men'),
+    (r'\bwi\s+t\s+ho\s+u\s+t\s+be\s+in\s+g\s+ha\s+r\s+s\s+h\b', 'without being harsh'),
+    (r'\bH\s+o\s+w\s+you\s+knew\s+h\s+i\s+m\b', 'How you knew him'),
+    (r'\bc\s+on\s+t\s+e\s+mp\s+l\s+at\s+i\s+v\s+e\b', 'contemplative'),
+    (r'\bta\s+l\s+e\s+n\s+t\b', 'talent'), (r'\bf\s+u\s+t\s+u\s+r\s+e\b', 'future'),
+    (r'\bt\s+h\s+i\s+ng\s+s\s+by\s+ha\s+n\s+d\b', 'things by hand'), (r'\bW\s+h\s+y\b', 'Why'),
+    (r'\bgi\s+ves\s+m\s+e\b', 'gives me'),
+    (r'\bWh\s+o\s+t\s+his\s+p\s+e\s+r\s+s\s+on\s+is\b', 'Who this person is'),
+    (r'\bhe\s+a\s+l\s+t\s+h\s+i\s+e\s+r\b', 'healthier'),
+    (r'\bh\s+o\s+w\s+you\s+k\s+n\s+e\s+w\b', 'how you knew'),
+    (r'\bdo\s+e\s+s\b', 'does'), (r'\bl\s+t\s+h\s+in\s+k\b', 'I think'),
+    (r'\ba\s+m\s+i\s+x\s+ed\s+b\s+a\s+g\b', 'a mixed bag'),
+    (r'\bwa\s+t\s+c\s+h\s+wi\s+t\s+h\b', 'watch with'),
+    (r'\bI\s+n\s+t\s+e\s+rn\s+e\s+t\b', 'Internet'),
+    (r'\bg\s+en\s+e\s+r\s+a\s+l\s+p\s+u\s+b\s+l\s+ic\b', 'general public'),
+    (r'\bw\s+h\s+o\s+you\s+t\s+a\s+l\s+k\s+w\s+it\s+h\b', 'who you talk with'),
+    (r'\bn\s+at\s+u\s+r\s+a\s+l\s+vi\s+e\s+w\s+s\b', 'natural views'),
+    (r'\bre\s+g\s+a\s+r\s+d\b', 'regard'), (r'\bw\s+t\s+h\b', 'with'),
+    (r'\bma\s+k\s+e\s+p\s+l\s+an\s+s\b', 'make plans'),
+    (r'\bmi\s+g\s+h\s+t\s+n\s+o\s+t\s+g\s+e\s+t\s+the\s+i\s+r\s+wo\s+r\s+k\s+do\s+n\s+e\s+on\s+t\s+i\s+me\b', 'might not get their work done on time'),
+    (r'\ba\s+r\s+e\s+do\s+in\s+g\b', 'are doing'),
+    (r'\bn\s+o\s+i\s+ntention\b', 'no intention'), (r'\bg\s+r\s+a\s+mm\s+a\s+r\s+s\b', 'grammar'),
+    # 常见词尾断开补充
+    (r'\bbecam e\b', 'became'), (r'\brol e\b', 'role'), (r'\bstree t\b', 'street'),
+    (r'\bove r\b', 'over'), (r'\breviewin g\b', 'reviewing'), (r'\bmake s\b', 'makes'),
+    (r'\bthing s\b', 'things'), (r'\bframework s\b', 'frameworks'), (r'\bflower s\b', 'flowers'),
+    (r'\bartwor k\b', 'artwork'), (r'\bday s\b', 'days'), (r'\beas y\b', 'easy'),
+    (r'\brule s\b', 'rules'), (r'\bask s\b', 'asks'), (r'\bplace s\b', 'places'),
+    (r'\bclear s\b', 'clears'), (r'\bgive s\b', 'gives'), (r'\btrip s\b', 'trips'),
+    (r'\bput s\b', 'puts'), (r'\bapp s\b', 'apps'), (r'\bpayment s\b', 'payments'),
+    (r'\bcoin s\b', 'coins'), (r'\bcar ds\b', 'cards'), (r'\bban k\b', 'bank'),
+    (r'\bTha t\b', 'That'), (r'\bwel l\b', 'well'), (r'\bcompl iment\b', 'compliment'),
+    (r'\bschoo\b', 'school'), (r'\bmore\s+difficult\s+than\s+how\b', 'more difficult than what'),
+    (r'\bI\s+a\s+m\s+passionate\b', 'I am passionate'),
+    (r'\bA\s+s\s+I\s+said\b', 'As I said'),
+    (r'\bw\s+sh\s+m\s+e\s+a\s+good\s+luck\b', 'wish me good luck'),
+    (r'\bl\s+a\s+m\s+alazy\b', 'I am lazy'),
+    (r'\bWhat\s+d\s+i\s+d\s+you\s+t\s+a\s+l\s+k\s+a\s+bo\s+u\s+t\b', 'What did you talk about'),
+    (r'\bwho\s+d\s+i\s+d\s+you\s+watch\s+with\b', 'who did you watch with'),
+    (r'\bw\s+h\s+at\s+d\s+i\s+d\s+you\s+do\s+and\s+ex\s+pl\s+a\s+in\s+what\s+you\s+f\s+e\s+l\s+t\s+a\s+b\s+ou\s+t\s+it\b', 'what did you do and explain what you felt about it'),
+    (r'\bSo\s+l\s+t\s+hi\s+n\s+k\s+it\s+is\s+a\s+mi\s+x\s+e\s+d-\s*ba\s+g\b', 'So I think it is a mixed bag'),
+    (r'\bI\s+k\s+in\s+do\s+f\s+f\s+e\s+l\s+t\s+t\s+h\s+at\s+the\s+me\s+d\s+it\s+at\s+i\s+on\s+ma\s+t\s+c\s+his\s+f\s+a\s+r\s+mo\s+r\s+e\s+d\s+if\s+f\s+i\s+c\s+u\s+l\s+t\s+t\s+h\s+at\s+h\s+o\s+w\s+we\s+do\s+i\s+to\s+n\s+a\s+daily\s+basis\b', 'I kind of felt that the meditation match is far more difficult than how we do it on a daily basis'),
     (r"(\w)'\s+([a-z])\b", r"\1'\2"),  # "word' s" → "word's", "shouldn' t" → "shouldn't"
 ]
 
 
+def merge_tail_letter_splits(text: str) -> str:
+    """安全合并词尾单字母断开：stree t -> street；不处理 to use / to be 等短词短语。"""
+    if not EN_WORDS:
+        return text
+
+    def replace(match: re.Match) -> str:
+        left, tail = match.group(1), match.group(2)
+        merged = left + tail
+        if merged.lower() in EN_WORDS:
+            return merged
+        return match.group(0)
+
+    return re.sub(r'\b([A-Za-z]{4,15})\s+([a-z])\b', replace, text)
+
+
 def apply_fixes(text: str) -> str:
     """应用所有修复规则（先逐词修复，再整句替换）"""
+    text = merge_tail_letter_splits(text)
     # 先做逐词修复（让严重碎片化的句子先恢复到半对状态）
     for pattern, replacement in PATTERNS:
         text = re.sub(pattern, replacement, text)
