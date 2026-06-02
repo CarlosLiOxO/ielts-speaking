@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "ielts-speaking",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev"],
+      "cwd": "/Users/mi/Documents/Projects/ielts-speaking/app",
+      "port": 5175
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+# 雅思口语练习 App - 生产环境 Nginx 配置示例
+#
+# 生产部署时必须配置 Mimo API 代理，否则评分、对话、TTS 和 STT 将无法访问。
+# 与 vite.config.ts 中的开发代理保持一致：
+#   /api/mimo/* → 本地 Node Mimo 代理
+#
+# 使用方式：
+#   1. 复制本文件为 /etc/nginx/sites-available/ielts-speaking
+#   2. 将 server_name 改为实际域名
+#   3. 将 root 路径指向 `app/dist` 构建产物
+#   4. 在同机或内网启动 `node app/server/mimo-proxy.mjs`
+#   5. ln -s /etc/nginx/sites-available/ielts-speaking /etc/nginx/sites-enabled/
+#   6. nginx -t && nginx -s reload
+
+server {
+    listen 80;
+    server_name your-domain.com;  # 替换为实际域名
+
+    # 前端静态文件（npm run build 产物）
+    root /path/to/ielts-speaking/app/dist;
+    index index.html;
+
+    # SPA 路由：所有未匹配路径回退到 index.html
+    location / {
+        try_files $uri $uri/ /index.html;
+    }
+
+    # 代理本地 Mimo API 服务
+    location /api/mimo/ {
+        proxy_pass http://127.0.0.1:8787/api/mimo/;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_read_timeout 300s;
+        client_max_body_size 100m;
+    }
+}
