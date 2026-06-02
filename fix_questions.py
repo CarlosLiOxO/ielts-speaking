@@ -624,6 +624,13 @@ PATTERNS = [
     (r'\bs i mp l e t h in g s\b', 'simple things'), (r'\bd a i l y l if e\b', 'daily life'),
     (r'\bmakes m e\b', 'makes me'), (r'\bfini shing\b', 'finishing'),
     (r'\bsatisfact ion\b', 'satisfaction'),
+    # 闪卡截图中这类 Part 2 长答案残留
+    (r'\bimpressing m e\b', 'impressing me'),
+    (r'\bli kes\b', 'likes'), (r'\bda y\b', 'day'), (r'\bkil ler\b', 'killer'),
+    (r'\bedg e\b', 'edge'), (r'\bincludin g\b', 'including'), (r'\bbl ack\b', 'black'),
+    (r'\blight a shinning star\b', 'like a shining star'),
+    (r'\battentions\b', 'attention'),
+    (r'\bwhen we had a Christmas show\b', 'when we had a Christmas show'),
     # 严重连续单字母 OCR 残留
     (r'\be\s+x\s+h\s+i\s+bit\s+i\s+on\s+s\s+and\s+a\s+r\s+t\s+if\s+ac\s+t\s+s\b', 'exhibitions and artifacts'),
     (r'\bthe\s+i\s+r\s+e\s+mo\s+t\s+i\s+on\s+s\b', 'their emotions'),

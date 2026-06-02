@@ -33,7 +33,7 @@ const part23Cards = [
   {
     topic: card.titleZh,
     question: card.part2!.prompt,
-    answer: card.part2!.sampleAnswer.slice(0, 300) + '…',
+    answer: card.part2!.sampleAnswer,
     type: 'part2' as const,
   },
   ...card.part3Questions.map(q => ({
