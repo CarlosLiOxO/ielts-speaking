@@ -1,0 +1,15 @@
+[build]
+  base = "app"
+  command = "npm run build"
+  publish = "dist"
+  functions = "netlify/functions"
+
+[[redirects]]
+  from = "/api/mimo/*"
+  to = "/.netlify/functions/mimo/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
