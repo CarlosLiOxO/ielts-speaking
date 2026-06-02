@@ -329,7 +329,7 @@ export function PracticePart1Page() {
 
 /** 参考答案折叠组件 */
 function ReferenceAnswer({ answer }: { answer: string }) {
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(true);
 
   if (!answer) return null;
 

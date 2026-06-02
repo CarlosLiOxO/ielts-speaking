@@ -3,7 +3,7 @@
  * 按真实雅思顺序：Part 1 (4-5题) → Part 2 (1分钟准备+独白) → Part 3 (4-5题)
  */
 import { useState } from 'react';
-import { Play, CheckCircle } from 'lucide-react';
+import { Play, CheckCircle, BookOpen } from 'lucide-react';
 import questionsData from '../data/questions.json';
 import { useAppStore } from '../stores/useAppStore';
 import { RecorderPanel } from '../components/RecorderPanel';
@@ -33,6 +33,7 @@ interface PendingExamFeedback {
   part: 'part1' | 'part2' | 'part3';
   question: string;
   transcript: string;
+  referenceAnswer: string;
   recordId: number;
   action: ExamFeedbackAction;
 }
@@ -187,6 +188,7 @@ export function ExamPage() {
       part: 'part1',
       question: currentPart1Q.question,
       transcript: data.transcript,
+      referenceAnswer: currentPart1Q.answer,
       recordId,
       action: next < exam.part1Questions.length ? 'next-part1' : 'start-part2',
     });
@@ -216,6 +218,7 @@ export function ExamPage() {
         part: 'part2',
         question: exam.card.part2.prompt,
         transcript: data.transcript,
+        referenceAnswer: exam.card.part2.sampleAnswer,
         recordId,
         action: 'start-part3',
       });
@@ -246,6 +249,7 @@ export function ExamPage() {
       part: 'part3',
       question: currentPart3Q?.question || '',
       transcript: data.transcript,
+      referenceAnswer: currentPart3Q?.answer || '',
       recordId,
       action: next < exam.part3Questions.length ? 'next-part3' : 'complete',
     });
@@ -294,6 +298,10 @@ export function ExamPage() {
               <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-blue-500">{pendingFeedback.part.toUpperCase()} 评分后继续</p>
               <p className="text-sm font-medium text-slate-900 dark:text-white">{pendingFeedback.question}</p>
             </div>
+            <div className="rounded-2xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-slate-900">
+              <p className="mb-2 text-xs font-semibold text-slate-500">我的回答转写</p>
+              <p className="text-sm leading-relaxed text-slate-700 dark:text-slate-200">{pendingFeedback.transcript || '未识别到有效转写文本'}</p>
+            </div>
             <AIFeedbackPanel
               question={pendingFeedback.question}
               transcript={pendingFeedback.transcript}
@@ -302,6 +310,7 @@ export function ExamPage() {
               onStatusChange={setFeedbackStatus}
               onFeedbackReceived={(feedback) => void updateRecordFeedback(pendingFeedback.recordId, feedback)}
             />
+            <ReferenceAnswer answer={pendingFeedback.referenceAnswer} />
             <button
               disabled={feedbackStatus !== 'success'}
               onClick={continueAfterFeedback}
@@ -452,5 +461,19 @@ export function ExamPage() {
         )}
       </PageContent>
     </PageShell>
+  );
+}
+
+function ReferenceAnswer({ answer }: { answer: string }) {
+  if (!answer) return null;
+
+  return (
+    <div className="rounded-2xl border border-blue-200 bg-blue-50 p-4 dark:border-blue-800 dark:bg-blue-950/30">
+      <div className="mb-3 flex items-center gap-2 text-sm font-semibold text-blue-700 dark:text-blue-200">
+        <BookOpen size={16} aria-hidden="true" />
+        参考答案
+      </div>
+      <p className="text-sm leading-relaxed text-slate-700 dark:text-slate-200">{answer}</p>
+    </div>
   );
 }
