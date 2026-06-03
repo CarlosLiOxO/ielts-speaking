@@ -2,7 +2,7 @@
  * 录音面板组件
  * 集成录音控制、Mimo 停止后转写、语音统计展示
  */
-import { useEffect, useRef } from 'react';
+import { useEffect, useMemo, useRef } from 'react';
 import { Mic, MicOff, Square, RotateCcw } from 'lucide-react';
 import { useRecorder } from '../hooks/useRecorder';
 import { useSTT } from '../hooks/useSTT';
@@ -33,12 +33,18 @@ export function RecorderPanel({ onComplete, timeLimit = 0, autoStart = false }: 
 
   const displayText = stt.transcript || stt.interimTranscript;
   const processedAudioRef = useRef<Blob | null>(null);
+  const audioUrl = useMemo(() => recorder.audioBlob ? URL.createObjectURL(recorder.audioBlob) : '', [recorder.audioBlob]);
 
   // 用 ref 保持 onComplete 最新引用，避免 effect 捕获过期闭包又不希望频繁更新依赖
   const onCompleteRef = useRef(onComplete);
   useEffect(() => {
     onCompleteRef.current = onComplete;
   }, [onComplete]);
+
+  useEffect(() => {
+    if (!audioUrl) return;
+    return () => URL.revokeObjectURL(audioUrl);
+  }, [audioUrl]);
 
   /** 开始录音 */
   const handleStart = async () => {
@@ -164,10 +170,25 @@ export function RecorderPanel({ onComplete, timeLimit = 0, autoStart = false }: 
           )}
         </div>
         {isRecording && (
-          <div className="flex items-center gap-1" aria-hidden="true">
-            {[16, 24, 20, 14].map((h, i) => (
-              <div key={i} className="w-1 rounded-full bg-red-500 animate-pulse" style={{ height: `${h}px`, animationDelay: `${i * 0.15}s` }} />
-            ))}
+          <div className="w-full max-w-xs space-y-2">
+            <div className="flex h-14 items-end justify-center gap-1 rounded-2xl border border-slate-200 bg-slate-50 px-3 py-2 dark:border-slate-800 dark:bg-slate-950/60" aria-label="实时收音频谱">
+              {recorder.spectrum.map((level, index) => (
+                <div
+                  key={index}
+                  className={`w-1.5 rounded-full transition-all ${recorder.isSilent ? 'bg-amber-400' : 'bg-emerald-500'}`}
+                  style={{ height: `${Math.max(8, level * 44)}px` }}
+                />
+              ))}
+            </div>
+            <div className="h-1.5 overflow-hidden rounded-full bg-slate-200 dark:bg-slate-800">
+              <div
+                className={`h-full rounded-full transition-all ${recorder.isSilent ? 'bg-amber-400' : 'bg-emerald-500'}`}
+                style={{ width: `${Math.min(100, Math.round(recorder.volumeLevel * 100))}%` }}
+              />
+            </div>
+            <p className={`text-center text-xs ${recorder.isSilent ? 'text-amber-500' : 'text-slate-400'}`}>
+              {recorder.isSilent ? '未检测到明显声音，请检查麦克风或靠近一些说话' : '正在检测麦克风输入'}
+            </p>
           </div>
         )}
       </div>
@@ -192,6 +213,13 @@ export function RecorderPanel({ onComplete, timeLimit = 0, autoStart = false }: 
           </button>
         )}
       </div>
+
+      {isStopped && audioUrl && (
+        <div className="mt-4 rounded-2xl border border-slate-200 bg-slate-50 p-3 dark:border-slate-800 dark:bg-slate-950/60">
+          <p className="mb-2 text-xs font-semibold text-slate-500">回听录音</p>
+          <audio controls src={audioUrl} className="w-full" />
+        </div>
+      )}
 
       {isStopped && recorder.stats && <div className="mt-4"><SpeechStatsPanel stats={recorder.stats} /></div>}
       {!settings.enableSTT && (

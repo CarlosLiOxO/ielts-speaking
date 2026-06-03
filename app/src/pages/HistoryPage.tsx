@@ -2,7 +2,7 @@
  * 历史记录页面
  * 展示练习记录、支持回放录音和与昨天对比
  */
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useMemo, useRef } from 'react';
 import { Play, Pause, Mic, Calendar, Flag, Trash2 } from 'lucide-react';
 import { getAllRecords, deleteRecord, toggleWeakRecord, getYesterdayRecord } from '../services/db';
 import { useAppStore } from '../stores/useAppStore';
@@ -259,17 +259,19 @@ export function HistoryPage() {
 
               {/* 录音回放 */}
               {selectedRecord.audioBlob && (
-                <div className="mb-4">
+                <div className="mb-4 rounded-xl bg-gray-50 p-3 dark:bg-gray-700">
+                  <p className="mb-2 text-xs font-medium text-gray-500">录音回听</p>
+                  <RecordAudioPlayer audioBlob={selectedRecord.audioBlob} />
                   <button
                     onClick={() => togglePlay(selectedRecord)}
-                    className={`flex items-center gap-2 w-full py-3 rounded-xl font-medium transition-colors ${
+                    className={`mt-2 flex items-center justify-center gap-2 w-full py-2 rounded-xl text-sm font-medium transition-colors ${
                       playingId === selectedRecord.id
                         ? 'bg-gray-700 text-white'
-                        : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 hover:bg-gray-200'
+                        : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 hover:bg-gray-100'
                     }`}
                   >
-                    {playingId === selectedRecord.id ? <Pause size={18} /> : <Play size={18} />}
-                    {playingId === selectedRecord.id ? '暂停回放' : '播放录音'}
+                    {playingId === selectedRecord.id ? <Pause size={16} /> : <Play size={16} />}
+                    {playingId === selectedRecord.id ? '暂停快速回放' : '快速回放'}
                   </button>
                 </div>
               )}
@@ -312,6 +314,16 @@ export function HistoryPage() {
       </div>
     </PageShell>
   );
+}
+
+function RecordAudioPlayer({ audioBlob }: { audioBlob: Blob }) {
+  const audioUrl = useMemo(() => URL.createObjectURL(audioBlob), [audioBlob]);
+
+  useEffect(() => {
+    return () => URL.revokeObjectURL(audioUrl);
+  }, [audioUrl]);
+
+  return <audio controls src={audioUrl} className="w-full" />;
 }
 
 function CompareRow({ label, today, yesterday, higherBetter }: {
