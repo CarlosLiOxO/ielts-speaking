@@ -263,12 +263,12 @@ export function PracticePart1Page() {
             </div>
 
             {/* 你的回答 */}
-            {practiceState.transcript && (
-              <div className="bg-white dark:bg-gray-800 rounded-2xl p-5 border border-gray-200 dark:border-gray-700">
-                <p className="text-sm text-gray-500 mb-2">你的回答</p>
-                <p className="text-gray-700 dark:text-gray-200 leading-relaxed">{practiceState.transcript}</p>
-              </div>
-            )}
+            <div className="bg-white dark:bg-gray-800 rounded-2xl p-5 border border-gray-200 dark:border-gray-700">
+              <p className="text-sm text-gray-500 mb-2">我的回答转写</p>
+              <p className="text-gray-700 dark:text-gray-200 leading-relaxed">
+                {practiceState.transcript || '未识别到有效转写文本，请重新录音后再评分。'}
+              </p>
+            </div>
 
             {/* AI 评分 */}
             <AIFeedbackPanel

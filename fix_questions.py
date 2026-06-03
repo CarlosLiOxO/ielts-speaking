@@ -594,6 +594,10 @@ PATTERNS = [
     (r'\bY\s*o\s+us\s+h\s+o\s+u\s+l\s+d\s+s\s*ay\b', 'You should say'),
     (r'\bYo\s+us\s+h\s+o\s+u\s+l\s+d\s+say\b', 'You should say'),
     (r'\bYou\s+should\s+say\s*:\s*', 'You should say: '),
+    (r'休息\s+一下', '休息一下'),
+    (r'这是\s+浪费', '这是浪费'),
+    (r'二手\s+网站', '二手网站'),
+    (r'设定\s+目标', '设定目标'),
     # 常见保留题 OCR 残留
     (r'\bf\s+mi\s+ly-style\b', 'family-style'),
     (r'\bcity l fe\b', 'city life'), (r'\bthe r e\b', 'there'),
@@ -706,8 +710,18 @@ def merge_tail_letter_splits(text: str) -> str:
     return re.sub(r'\b([A-Za-z]{4,15})\s+([a-z])\b', replace, text)
 
 
+def clean_cjk_spacing(text: str) -> str:
+    """清理中文 OCR 断字空格：你 喜欢 -> 你喜欢，? 你 -> ?你。"""
+    text = re.sub(r'([\u4e00-\u9fff])\s+([\u4e00-\u9fff])', r'\1\2', text)
+    text = re.sub(r'([\u4e00-\u9fff])\s+([?？,，.!。:：;；、])', r'\1\2', text)
+    text = re.sub(r'([?？,，.!。:：;；、])\s+([\u4e00-\u9fff])', r'\1\2', text)
+    text = re.sub(r'([\u4e00-\u9fff])\s*/\s*([\u4e00-\u9fff])', r'\1/\2', text)
+    return text
+
+
 def apply_fixes(text: str) -> str:
     """应用所有修复规则（先逐词修复，再整句替换）"""
+    text = clean_cjk_spacing(text)
     text = merge_tail_letter_splits(text)
     # 先做逐词修复（让严重碎片化的句子先恢复到半对状态）
     for pattern, replacement in PATTERNS:

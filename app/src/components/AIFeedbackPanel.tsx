@@ -84,7 +84,17 @@ export function AIFeedbackPanel({
     void requestFeedback();
   }, [autoRequest, feedback, loading, onStatusChange, part, preloadedFeedback, question, requestFeedback, transcript]);
 
-  if (!transcript.trim()) return null;
+  if (!transcript.trim()) {
+    return (
+      <section className="overflow-hidden rounded-[22px] border border-amber-200 bg-amber-50 p-5 dark:border-amber-800 dark:bg-amber-950/30">
+        <div className="mb-3 flex items-center gap-2">
+          <Sparkles size={18} className="text-amber-500" aria-hidden="true" />
+          <p className="text-xs font-semibold uppercase tracking-wide text-amber-600 dark:text-amber-300">AI 评分报告</p>
+        </div>
+        <AIRequestStatus type="error" message="没有识别到有效转写文本，暂时无法评分。请重新录音，或确认录音时长和麦克风权限。" compact />
+      </section>
+    );
+  }
 
   return (
     <section className="overflow-hidden rounded-[22px] border border-purple-200 bg-gradient-to-br from-purple-50 via-white to-indigo-50 shadow-[0_12px_32px_rgba(88,28,135,0.08)] dark:border-purple-800 dark:from-purple-950/40 dark:via-slate-900 dark:to-indigo-950/30">

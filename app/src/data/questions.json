@@ -6,7 +6,7 @@
         "questions": [
           {
             "question": "Where do you live?Do you like the area that you live in?",
-            "answer": "你住在哪里? 你 喜欢自己住的地区吗? I live in...I love the area that I live in. I am so lucky that we have so much to do which are very close to us! Also, there is public transportation just one block from my building. Everything is so convenient!"
+            "answer": "你住在哪里?你喜欢自己住的地区吗? I live in...I love the area that I live in. I am so lucky that we have so much to do which are very close to us! Also, there is public transportation just one block from my building. Everything is so convenient!"
           },
           {
             "question": "What are some changes in the area recently?",
@@ -22,7 +22,7 @@
           },
           {
             "question": "What part do you love most in the place?",
-            "answer": "你最喜欢那个地区的什么部分? Well, I absolutely adore the convenience of my neighborhood! Being close to downtown means everything is within reach - theresa subway station just 5 minutes away and several shopping districts nearby where I can easily grab a bite, watch movies or go shopping. Oh, and the best part is the park right across my street-I often take evening walks there enjoying the lovely scenery. environmental conditions? 你会想住在其他环境因素完全不同的地点吗? Def initely! While I'm quite happy with my current place, I'd love to experience different lifestyles. A coastal town particularly appeals to me - imagine waking up to ocean breezes, walking on sandy beaches, and maybe even trying some crab fishing! It would be such a refreshing change from city life, though il might miss the urban conveniences after a while."
+            "answer": "你最喜欢那个地区的什么部分? Well, I absolutely adore the convenience of my neighborhood! Being close to downtown means everything is within reach - theresa subway station just 5 minutes away and several shopping districts nearby where I can easily grab a bite, watch movies or go shopping. Oh, and the best part is the park right across my street-I often take evening walks there enjoying the lovely scenery. environmental conditions?你会想住在其他环境因素完全不同的地点吗? Def initely! While I'm quite happy with my current place, I'd love to experience different lifestyles. A coastal town particularly appeals to me - imagine waking up to ocean breezes, walking on sandy beaches, and maybe even trying some crab fishing! It would be such a refreshing change from city life, though il might miss the urban conveniences after a while."
           }
         ]
       },
@@ -31,7 +31,7 @@
         "questions": [
           {
             "question": "Where is your hometown? Is that a big city or a small place?",
-            "answer": "你的家乡在哪里? 是大城市还是小地方? I live in Guangzhou. I t is located in the Guangdong Provi nce. and is known as the City of Flowers. It is the thi rd largest city in China. It has a population of over 13 million people.It's a big place.It is the educational and cultural center of Southern China. It's also known as the City of Flowers because there are evergreens and flowers in bloom year round because of its climate. It's a pretty city 2. How long have you lived there? I have lived here all of my life, for ei ghteen years. My parents have lived here all of their lives too."
+            "answer": "你的家乡在哪里?是大城市还是小地方? I live in Guangzhou. I t is located in the Guangdong Provi nce. and is known as the City of Flowers. It is the thi rd largest city in China. It has a population of over 13 million people.It's a big place.It is the educational and cultural center of Southern China. It's also known as the City of Flowers because there are evergreens and flowers in bloom year round because of its climate. It's a pretty city 2. How long have you lived there? I have lived here all of my life, for ei ghteen years. My parents have lived here all of their lives too."
           },
           {
             "question": "What do you like the most about your hometown?",
@@ -47,11 +47,11 @@
           },
           {
             "question": "Will you learn the history of your hometown?/Do the schools teach the",
-            "answer": "histo y of your hometown? 你会学习家乡的历史吗? /学校会教你们家乡的历史吗? Actually, not really. While we do have history classes in school, they mainly focus on broader Chinese and world history rather than local history. However, we sometimes visit local museums where we can learn about our hometown's past through exhibitions and artifacts."
+            "answer": "histo y of your hometown?你会学习家乡的历史吗? /学校会教你们家乡的历史吗? Actually, not really. While we do have history classes in school, they mainly focus on broader Chinese and world history rather than local history. However, we sometimes visit local museums where we can learn about our hometown's past through exhibitions and artifacts."
           },
           {
             "question": "What is the most famous in your hometown?",
-            "answer": "你 们家乡最出名的是什么? Two things stand out: Cantonese cuisine (like dim sum and roast goose) and iconic landmarks. The Canton Tower (\"Little Waist\") is now the city's modern symbol, while the Five-Ram Statue represents its ancient legend— myth says five immortal rams brought prosperity to Guangzhou."
+            "answer": "你们家乡最出名的是什么? Two things stand out: Cantonese cuisine (like dim sum and roast goose) and iconic landmarks. The Canton Tower (\"Little Waist\") is now the city's modern symbol, while the Five-Ram Statue represents its ancient legend— myth says five immortal rams brought prosperity to Guangzhou."
           }
         ]
       },
@@ -80,19 +80,19 @@
           },
           {
             "question": "Do you plan to live there for a long time?",
-            "answer": "I'm hoping after I finish my education, I find a job and I can find my own home. Housing is expensive, so I may be home with my parents longer than I plan to be. 7. What do you want to change in the home? To be honest, I'm pretty content with my current place since l've gotten used to it over time. But if I had to pick one thing, I'd definitely replace our wooden sofa with a plush, cushioned one. Those hard wooden surfaces are just unbearable -you can't even relax properly after a long day! 4. W or k or S t ud y 工 作 /学 习"
+            "answer": "I'm hoping after I finish my education, I find a job and I can find my own home. Housing is expensive, so I may be home with my parents longer than I plan to be. 7. What do you want to change in the home? To be honest, I'm pretty content with my current place since l've gotten used to it over time. But if I had to pick one thing, I'd definitely replace our wooden sofa with a plush, cushioned one. Those hard wooden surfaces are just unbearable -you can't even relax properly after a long day! 4. W or k or S t ud y 工作/学习"
           },
           {
             "question": "What is your major? Why did you choose that subject?",
-            "answer": "你的专业是什么? 为什么会选择这个专业? I am m joring in International Business. I chose my major subject of study based on my aptitude in studying economics accounting, and languages my interest in travel, and advice from my parents and teachers. I felt this major area of study would prepare me for a career that I would find interesting and that I could be successful in."
+            "answer": "你的专业是什么?为什么会选择这个专业? I am m joring in International Business. I chose my major subject of study based on my aptitude in studying economics accounting, and languages my interest in travel, and advice from my parents and teachers. I felt this major area of study would prepare me for a career that I would find interesting and that I could be successful in."
           },
           {
             "question": "What is the major about? Do you like it?",
-            "answer": "这个专业讲的是什么? 你喜欢这个专业吗? This year, I'm taking advanced classes in Finance, Macroeconomics, English, and Information Technology. I am also taking a class in Modern European History because I thought this would be interesting. I love my subject because it is so i nteresting. I find the more I learn, the more I find interesting about it! I think everything I am learning will be useful in my career."
+            "answer": "这个专业讲的是什么?你喜欢这个专业吗? This year, I'm taking advanced classes in Finance, Macroeconomics, English, and Information Technology. I am also taking a class in Modern European History because I thought this would be interesting. I love my subject because it is so i nteresting. I find the more I learn, the more I find interesting about it! I think everything I am learning will be useful in my career."
           },
           {
             "question": "Do you think it is difficult? Why?",
-            "answer": "你认为你的专业难吗? 为什么? Wel, studying International Business can be quite challenging at times. The main difficulty lies in having to master both theoretical knowledge like trade policies and practical skills such as cross-cultural negotiation. That really makes it a difficult"
+            "answer": "你认为你的专业难吗?为什么? Wel, studying International Business can be quite challenging at times. The main difficulty lies in having to master both theoretical knowledge like trade policies and practical skills such as cross-cultural negotiation. That really makes it a difficult"
           },
           {
             "question": "What do you do after classes?",
@@ -132,7 +132,7 @@
           },
           {
             "question": "Do you prefer to work in the morning or in the afternoon?",
-            "answer": "你 更喜欢早上工作还是下午? To be honest, I don't have any choice right? After all, I have to work from morning to late in the evening.If I had to pick though, I'd say I'm definitely more productive in the afternoons. By afternoon, I've hit my stride mentally, though I'll admit there's never really a time when I'm thrilled to be working!"
+            "answer": "你更喜欢早上工作还是下午? To be honest, I don't have any choice right? After all, I have to work from morning to late in the evening.If I had to pick though, I'd say I'm definitely more productive in the afternoons. By afternoon, I've hit my stride mentally, though I'll admit there's never really a time when I'm thrilled to be working!"
           }
         ]
       }
@@ -184,7 +184,7 @@
           },
           {
             "question": "Do you like buying shoes? How often do you buy shoes?",
-            "answer": "你喜欢买鞋吗? 你 多久买一次鞋? Yes, I like buying shoes because they can really change the way an outfit looks. I usually buy shoes about twice a year, mostly when the seasons change. For me, comfort is more important than fashion, so l don't shop for them too frequently"
+            "answer": "你喜欢买鞋吗?你多久买一次鞋? Yes, I like buying shoes because they can really change the way an outfit looks. I usually buy shoes about twice a year, mostly when the seasons change. For me, comfort is more important than fashion, so l don't shop for them too frequently"
           }
         ]
       },
@@ -197,11 +197,11 @@
           },
           {
             "question": "When you were studying it, did anyone help you? How did they help",
-            "answer": "你学习的时候， 有人帮过你吗? 他 们是怎么帮你的? Yes, my English teacher helped me a lot when I was studying it. She explained di fficult grammar rules in a very simple way and gave me extra speaking practice after class. Thanks to her support, i became much more confident in using the language."
+            "answer": "你学习的时候，有人帮过你吗?他们是怎么帮你的? Yes, my English teacher helped me a lot when I was studying it. She explained di fficult grammar rules in a very simple way and gave me extra speaking practice after class. Thanks to her support, i became much more confident in using the language."
           },
           {
             "question": "Before you started this subject, did you think it was difficult?",
-            "answer": "在你开始这个课题之前，你 认为它很难吗? Yes, I used to think English was really difficult before I started learning it. The grammar rules and vocabulary looked complicated at first. But once I began studying with a good teacher, I realized it was more interesting and manageable than I had imagined. 4. A rt 艺 术"
+            "answer": "在你开始这个课题之前，你认为它很难吗? Yes, I used to think English was really difficult before I started learning it. The grammar rules and vocabulary looked complicated at first. But once I began studying with a good teacher, I realized it was more interesting and manageable than I had imagined. 4. A rt 艺术"
           },
           {
             "question": "Do you like art?",
@@ -209,7 +209,7 @@
           },
           {
             "question": "Do you like visiting art galleries?",
-            "answer": "你 喜欢参观美术馆吗? Yes, I enjoy visiting art galleries whenever I have free time. They allow me to see different styles of artwork and understand the stories behind them. I find the atmosphere very peaceful, which makes the whole experience relaxing and in s p ir in g."
+            "answer": "你喜欢参观美术馆吗? Yes, I enjoy visiting art galleries whenever I have free time. They allow me to see different styles of artwork and understand the stories behind them. I find the atmosphere very peaceful, which makes the whole experience relaxing and in s p ir in g."
           },
           {
             "question": "Do you want to be an artist?",
@@ -251,7 +251,7 @@
           },
           {
             "question": "Do you like lending things to others?",
-            "answer": "你喜欢把东西借给别人吗? Yes, I don't mind lending things to others, especially to close friends. I believe sharing items like books or notes can be helpful and shows trust. But I usually make sure the person will return them, because I don't want to lose something important. 3.Would you lend money to your friend? 你会借钱给你的朋友吗? Yes, I would lend money to a close friend if they really needed it. I think helping friends in difficult times shows care and trust. But I would only lend an amount that I can afford to lose,just to avoid potential problems."
+            "answer": "你喜欢把东西借给别人吗? Yes, I don't mind lending things to others, especially to close friends. I believe sharing items like books or notes can be helpful and shows trust. But I usually make sure the person will return them, because I don't want to lose something important. 3.Would you lend money to your friend?你会借钱给你的朋友吗? Yes, I would lend money to a close friend if they really needed it. I think helping friends in difficult times shows care and trust. But I would only lend an amount that I can afford to lose,just to avoid potential problems."
           },
           {
             "question": "Would you lend your phone to your fiend?",
@@ -360,7 +360,7 @@
           },
           {
             "question": "Is there any advertisement that impressed you much?What it is about?",
-            "answer": "有什么广告让你印象深刻吗? 这是关于什么的? Yes, I was really impressed by an advertisement from Apple about their iPhone. It showed how people could use the phone to take professional-quality photos and the visuals were so creative that it stuck in my mind for a long time."
+            "answer": "有什么广告让你印象深刻吗?这是关于什么的? Yes, I was really impressed by an advertisement from Apple about their iPhone. It showed how people could use the phone to take professional-quality photos and the visuals were so creative that it stuck in my mind for a long time."
           },
           {
             "question": "Will there be more advertisements in the future?",
@@ -377,7 +377,7 @@
           },
           {
             "question": "Do you like listening to music in public leisure places?",
-            "answer": "你 喜欢在公共休闲场所听音乐吗? Yes, I do.When I'm in public leisure places like parks or cafés, I enjoy listening to music because it helps me relax and creates a pleasant atmosphere. Sometimes it also makes the environment feel more lively and enjoyable."
+            "answer": "你喜欢在公共休闲场所听音乐吗? Yes, I do.When I'm in public leisure places like parks or cafés, I enjoy listening to music because it helps me relax and creates a pleasant atmosphere. Sometimes it also makes the environment feel more lively and enjoyable."
           },
           {
             "question": "Do you tallk to strangers when you're in public places?",
@@ -398,7 +398,7 @@
         "questions": [
           {
             "question": "Do you take a break?",
-            "answer": "你休 息 一下 吗? Yes, I usually take short breaks when I'm studying or working. For example,I might stand up, stretch a little, or check my phone for a few minutes. I think taking breaks helps me stay focused and prevents me from feeling too tired."
+            "answer": "你休息一下吗? Yes, I usually take short breaks when I'm studying or working. For example,I might stand up, stretch a little, or check my phone for a few minutes. I think taking breaks helps me stay focused and prevents me from feeling too tired."
           },
           {
             "question": "Have you rest before?",
@@ -477,7 +477,7 @@
         "questions": [
           {
             "question": "Do you have an experience that you did something well?",
-            "answer": "你有没有做得很好的经历? Yes I do. I remember once I gave a presentation at school, and I prepared really well, so my teacher praised m e in front of the whole class.That experience gave me a lot of confidence and made me feel proud of myself. 你是否有过老师认为你做得很好的经历? Yes, I do. I remember once I wrote an essay for my English class, and my teacher said it wa s well-structured and creative. Her compliment really encouraged me and gave me more confidence in my writing."
+            "answer": "你有没有做得很好的经历? Yes I do. I remember once I gave a presentation at school, and I prepared really well, so my teacher praised m e in front of the whole class.That experience gave me a lot of confidence and made me feel proud of myself.你是否有过老师认为你做得很好的经历? Yes, I do. I remember once I wrote an essay for my English class, and my teacher said it wa s well-structured and creative. Her compliment really encouraged me and gave me more confidence in my writing."
           },
           {
             "question": "Do you often tell your friends when they do something well?",
@@ -529,7 +529,7 @@
           },
           {
             "question": "Will you remember something important in future studies and work?",
-            "answer": "在未来的学习和工作中， 你 会记住一些重要的事情吗? I guess so. Let's say, if I work as a teacher in the future, I defini tely need to remember the importance of patience.Yo u know, patience is a very important virtue."
+            "answer": "在未来的学习和工作中，你会记住一些重要的事情吗? I guess so. Let's say, if I work as a teacher in the future, I defini tely need to remember the importance of patience.Yo u know, patience is a very important virtue."
           },
           {
             "question": "Do you like to remember things?",
@@ -541,7 +541,7 @@
           },
           {
             "question": "Do people's memory better now or in childhood?",
-            "answer": "人们现在记忆力更好还是小时候? It's hard to say. Som e people's memor ization ablity has been constantly declining since their childhood, while others might find it easier and easier to remember everything. I think the jury is st ill out on this question. 3. Stay Up Late 熬 夜"
+            "answer": "人们现在记忆力更好还是小时候? It's hard to say. Som e people's memor ization ablity has been constantly declining since their childhood, while others might find it easier and easier to remember everything. I think the jury is st ill out on this question. 3. Stay Up Late 熬夜"
           },
           {
             "question": "Do you often stay up late?",
@@ -578,7 +578,7 @@
           },
           {
             "question": "If you need to do something for a long time, how do you feel?",
-            "answer": "如果你需要长时间做一件事， 你 会怎样? I think I might react different ly towards dif erent things. If it is something that is truly challenging, I think I will be stimulated and motivated. But if it is boring and repetitive, then it might drive me round the bend. 你 认为自己小时候更有耐心还是现在? I think I am equally important in bot h stages. I needed to be patient with my homework back in our childhood. Simi larly, patience is also required in the workplace after l enter the society. You know, pat ience is an important virtue, isn't"
+            "answer": "如果你需要长时间做一件事，你会怎样? I think I might react different ly towards dif erent things. If it is something that is truly challenging, I think I will be stimulated and motivated. But if it is boring and repetitive, then it might drive me round the bend.你认为自己小时候更有耐心还是现在? I think I am equally important in bot h stages. I needed to be patient with my homework back in our childhood. Simi larly, patience is also required in the workplace after l enter the society. You know, pat ience is an important virtue, isn't"
           }
         ]
       },
@@ -616,7 +616,7 @@
           },
           {
             "question": "How often do you use it?",
-            "answer": "Almost on a daily basis. After I wake up everything, I will do it immediately to ensure the tidiness of my house. I like to see everything in order i mp or t an t? 你认为像洗碗机、 扫地机这类的机器重要吗? Absolutely. We could resort to them to most of things that could only be done manuallyin the past. But if we overly rely on them, we might become lazy bones."
+            "answer": "Almost on a daily basis. After I wake up everything, I will do it immediately to ensure the tidiness of my house. I like to see everything in order i mp or t an t?你认为像洗碗机、扫地机这类的机器重要吗? Absolutely. We could resort to them to most of things that could only be done manuallyin the past. But if we overly rely on them, we might become lazy bones."
           },
           {
             "question": "Do you read the instructions before using a machine?",
@@ -624,7 +624,7 @@
           },
           {
             "question": "Who will you turn to for repair if the machine breaks down?",
-            "answer": "如果机器坏了，你 会找谁修理? I might simply across through some social media webs tes, with the purpose of f inding something useful so that I could sel f repair it. But if solvin g the problem is beyond my capacity, then I must resort to the technician to come to help me. 7. Making a List 计 划"
+            "answer": "如果机器坏了，你会找谁修理? I might simply across through some social media webs tes, with the purpose of f inding something useful so that I could sel f repair it. But if solvin g the problem is beyond my capacity, then I must resort to the technician to come to help me. 7. Making a List 计划"
           },
           {
             "question": "Do you like to make a list?",
@@ -636,11 +636,11 @@
           },
           {
             "question": "What are the benefits of making a list? Do you think it is useful?",
-            "answer": "make lists for study or work? 做计划的好处是什么? 你 认为为学习或工作区做计划有用吗? As I said, it can make us become well-organised. By way of list ing different things according to their different categories, people can arrange their life more easily."
+            "answer": "make lists for study or work?做计划的好处是什么?你认为为学习或工作区做计划有用吗? As I said, it can make us become well-organised. By way of list ing different things according to their different categories, people can arrange their life more easily."
           },
           {
             "question": "Will you make the list for studying/shopping/...?",
-            "answer": "你会为学习、 购 物等事情 (考官可能会问任意一件) 做 计划吗? Absolutely. Making a list for things is a must for me. Without doing it beforehand, I might be fully unprepared for the things."
+            "answer": "你会为学习、购物等事情 (考官可能会问任意一件) 做计划吗? Absolutely. Making a list for things is a must for me. Without doing it beforehand, I might be fully unprepared for the things."
           },
           {
             "question": "Why do some people not like to make plan?",
@@ -665,7 +665,7 @@
           },
           {
             "question": "Would you like to have more free time in the future?",
-            "answer": "你未来想有更多的空闲时间吗? Absolutely yes. I hope I could travel abroad in the future to experience different types of cultures. I guess everyone would be delighted to have more fre e time, 你们国家的孩子小时候有很多空闲时间吗? Not so much any more. It would be very rare nowadays to see any children spending some quality free time. Instead, their free time has bee n largely sacrificed for some educational activities, such as English learning, painting, drawing, you name it. I am so terribly sorry for them, to be honest with you."
+            "answer": "你未来想有更多的空闲时间吗? Absolutely yes. I hope I could travel abroad in the future to experience different types of cultures. I guess everyone would be delighted to have more fre e time,你们国家的孩子小时候有很多空闲时间吗? Not so much any more. It would be very rare nowadays to see any children spending some quality free time. Instead, their free time has bee n largely sacrificed for some educational activities, such as English learning, painting, drawing, you name it. I am so terribly sorry for them, to be honest with you."
           }
         ]
       },
@@ -690,7 +690,7 @@
           },
           {
             "question": "Have you taken photos with your family?",
-            "answer": "你和家人一起拍过照吗? Absolutely yes. We took a phone back in the last spring festival. If my memory serves me, we were sitting together initially, and then my cousin Frank asked us to wear a bright smile. Finally, he captured a very harmonious family moment. Everyone was over the moon at that time 1 0. Mobile Phone 手 机"
+            "answer": "你和家人一起拍过照吗? Absolutely yes. We took a phone back in the last spring festival. If my memory serves me, we were sitting together initially, and then my cousin Frank asked us to wear a bright smile. Finally, he captured a very harmonious family moment. Everyone was over the moon at that time 1 0. Mobile Phone 手机"
           },
           {
             "question": "How often do you use mobile phone?",
@@ -719,7 +719,7 @@
           },
           {
             "question": "Would you like to learn the skill of cooking?",
-            "answer": "你会学习做饭的技能吗? Defini tely. In fact, I would watch some vi deos teaching you how to cook some foreign cuisine.like the spaghetti and sushi. I would follow the baby steps to learn some very useful techniques. And l always impress my friends with my culinary arts. 4. Do you think che f is a good job? 你觉得厨师是一个好的职业吗? Well it really depends on how you look at it. From a societal perspective, being a chef is undoubtedly valuable as they create delicious meals and make social gatherings more enjoyable. However, from a career standpoint,I'm less convincedthe profession demand s years of training, offer s relatively modest pay compared to the workload, and ofen involves long, grueling hour s in high-pressure environments"
+            "answer": "你会学习做饭的技能吗? Defini tely. In fact, I would watch some vi deos teaching you how to cook some foreign cuisine.like the spaghetti and sushi. I would follow the baby steps to learn some very useful techniques. And l always impress my friends with my culinary arts. 4. Do you think che f is a good job?你觉得厨师是一个好的职业吗? Well it really depends on how you look at it. From a societal perspective, being a chef is undoubtedly valuable as they create delicious meals and make social gatherings more enjoyable. However, from a career standpoint,I'm less convincedthe profession demand s years of training, offer s relatively modest pay compared to the workload, and ofen involves long, grueling hour s in high-pressure environments"
           }
         ]
       },
@@ -740,7 +740,7 @@
           },
           {
             "question": "Do you often organise a thorough cleaning?",
-            "answer": "你会经常组织大扫除吗? No that often, as far as I recall. The recent thorough cleaning I can think of off the top of my head happened almost 1 year ago. After my naughty brother Frank knocked things over, my living room was in a terrible mess. Then I called the cleaning company to come over to help m e to clean it thoroughly, which took more than 3 years to put everything back to normal. I was extremely knackere d by the end of the day. 1 3. Technology 科 技"
+            "answer": "你会经常组织大扫除吗? No that often, as far as I recall. The recent thorough cleaning I can think of off the top of my head happened almost 1 year ago. After my naughty brother Frank knocked things over, my living room was in a terrible mess. Then I called the cleaning company to come over to help m e to clean it thoroughly, which took more than 3 years to put everything back to normal. I was extremely knackere d by the end of the day. 1 3. Technology 科技"
           },
           {
             "question": "Have you ever used any technology?",
@@ -811,7 +811,7 @@
           },
           {
             "question": "What is the influence of science on human life?",
-            "answer": "科学对人类生活产生了什么影响? Science has a huge influence on human life because it makes our dai ly acti vities much easier and more efficient. For example, modern medicine al lows people to live longer and healthier lives. It also drives innovation in areas like transport and communication, which makes the world more connected than ever before. 3. Wh at c an in individuals do for scientific research? 个人能为科学研究做些什么? I think ordinary people can contribute to scientific research in several ways. For i nstance, they can take part in citizen science projects, like recording local weather data or tracking wi ldlife. They can also support research f nanciall y through donations, or simply by spreading awareness about scientific findings"
+            "answer": "科学对人类生活产生了什么影响? Science has a huge influence on human life because it makes our dai ly acti vities much easier and more efficient. For example, modern medicine al lows people to live longer and healthier lives. It also drives innovation in areas like transport and communication, which makes the world more connected than ever before. 3. Wh at c an in individuals do for scientific research?个人能为科学研究做些什么? I think ordinary people can contribute to scientific research in several ways. For i nstance, they can take part in citizen science projects, like recording local weather data or tracking wi ldlife. They can also support research f nanciall y through donations, or simply by spreading awareness about scientific findings"
           },
           {
             "question": "What influence can international cooperation in science bring about?",
@@ -833,11 +833,11 @@
         "part3Questions": [
           {
             "question": "Should all museums and historical buildings sell tickets?",
-            "answer": "所 有博物馆和历史建筑都应该售票吗? 1 don't think all of them should charge admission. Som e national museums or historical sites could be free so that everyone has access to culture and history. But for special exhibitions or sites that require high maintenance, selling tickets is reasonable to cover the costs. 2.)Where do you think people prefer to visit? 你认为人们更喜欢去哪里参观? I think many people prefer to visit famous cities, such as Paris or New York, because they offer a mi x of culture, history, and modern attractions. Others may enjoy natural destinations like beache s or mountains where they can relax and escape from bus y city life. I t really depends on individual interests and lifestyles."
+            "answer": "所有博物馆和历史建筑都应该售票吗? 1 don't think all of them should charge admission. Som e national museums or historical sites could be free so that everyone has access to culture and history. But for special exhibitions or sites that require high maintenance, selling tickets is reasonable to cover the costs. 2.)Where do you think people prefer to visit?你认为人们更喜欢去哪里参观? I think many people prefer to visit famous cities, such as Paris or New York, because they offer a mi x of culture, history, and modern attractions. Others may enjoy natural destinations like beache s or mountains where they can relax and escape from bus y city life. I t really depends on individual interests and lifestyles."
           },
           {
             "question": "Which kind of building do people prefer,villa or apartment?",
-            "answer": "人们更喜欢哪种建筑， 别墅还是公寓? I think it really depends on people's lifestyle and income. Many young people in big cities prefer apartment s because they are more affordable and closer to work. However, wealthier families often choose villas since they provide more space, privacy, and a better living environment."
+            "answer": "人们更喜欢哪种建筑，别墅还是公寓? I think it really depends on people's lifestyle and income. Many young people in big cities prefer apartment s because they are more affordable and closer to work. However, wealthier families often choose villas since they provide more space, privacy, and a better living environment."
           },
           {
             "question": "Why do people prefer to live in new houses?",
@@ -845,7 +845,7 @@
           },
           {
             "question": "Which do people prefer, modern buildings or traditi onal buildings?",
-            "answer": "人们更喜欢哪一种， 现代建筑还是传统建筑? I think people's preferences really depend on the purpose. For daily life, many prefer modern buildings because they are more convenient and have better facilities. But when it comes to tourism or cultural value, traditional buildings are often more attractive since they represent history and identiy."
+            "answer": "人们更喜欢哪一种，现代建筑还是传统建筑? I think people's preferences really depend on the purpose. For daily life, many prefer modern buildings because they are more convenient and have better facilities. But when it comes to tourism or cultural value, traditional buildings are often more attractive since they represent history and identiy."
           }
         ]
       },
@@ -863,7 +863,7 @@
         "part3Questions": [
           {
             "question": "Who prefer long journey, young people or old people?",
-            "answer": "谁更喜欢长途旅行， 年轻人还是老年人? I think young people usually prefer long journey s because they are more energetic and curious about exploring new places. Older people, on the other hand, might enjoy shorter and more comfortable trips since long travel can be tiring. But of course, it also depends on individual health and interests."
+            "answer": "谁更喜欢长途旅行，年轻人还是老年人? I think young people usually prefer long journey s because they are more energetic and curious about exploring new places. Older people, on the other hand, might enjoy shorter and more comfortable trips since long travel can be tiring. But of course, it also depends on individual health and interests."
           },
           {
             "question": "What do people prepare before journey?",
@@ -909,7 +909,7 @@
           },
           {
             "question": "Is it a waste of time if people don't use their talents?",
-            "answer": "如果人们不发挥他们的才能， 这 是 浪费时间吗? I wouldn't say it's always a waste of time, but it can be a pity if talents are never developed. Talents are valuable resources that could benefit both the individual and society. If someone ignores them completely, they might miss opportunities for personal growth and contribution."
+            "answer": "如果人们不发挥他们的才能，这是浪费时间吗? I wouldn't say it's always a waste of time, but it can be a pity if talents are never developed. Talents are valuable resources that could benefit both the individual and society. If someone ignores them completely, they might miss opportunities for personal growth and contribution."
           }
         ]
       },
@@ -952,7 +952,7 @@
         "part3Questions": [
           {
             "question": "Why do people like visiting places with trees or forests?",
-            "answer": "为什么人们喜欢去有树或森林的地方? People enjoy visiting forests because they offer fresh air and beautiful scenery, which help people relax. Spending time among trees also reduces stress and gives people a break from noisy city life. In addition, forests allow visitors to feel closer to nature and appreciate it's beauty. 2. Are natural views better than city views? 自然景观比城市景观好吗? I think natural views are generally better because they gi ve people peace, fresh air, and a sense of relaxation. Mountains, rivers, and forests often feel more refreshing than crowded streets and tall buildings. However city views can also be attractive at night, with all the light s and modern architecture."
+            "answer": "为什么人们喜欢去有树或森林的地方? People enjoy visiting forests because they offer fresh air and beautiful scenery, which help people relax. Spending time among trees also reduces stress and gives people a break from noisy city life. In addition, forests allow visitors to feel closer to nature and appreciate it's beauty. 2. Are natural views better than city views?自然景观比城市景观好吗? I think natural views are generally better because they gi ve people peace, fresh air, and a sense of relaxation. Mountains, rivers, and forests often feel more refreshing than crowded streets and tall buildings. However city views can also be attractive at night, with all the light s and modern architecture."
           },
           {
             "question": "Do all people need some nature?",
@@ -1043,7 +1043,7 @@
         "part3Questions": [
           {
             "question": "Do you think it's important to take children to the zoo to see animals?",
-            "answer": "你认为带孩子去动物园看动物重要吗? Yes, I think taking children to the zoo is important because it gives thema chance to see real animals rather than just pictures in books. This experience can spark their curiosity about nature and teach them the value of protecting wildlife. Moreover zoos often provide educational programs that make learning more engaging. 3. Why do children like animals? 为什么孩子们喜欢动物? Children like animals because they find them cute and interesting. Many animals are playful, which makes children feel happy and excited. Also, kids often see animals in cartoons or storybooks, so they naturally feel cur ious and connected to"
+            "answer": "你认为带孩子去动物园看动物重要吗? Yes, I think taking children to the zoo is important because it gives thema chance to see real animals rather than just pictures in books. This experience can spark their curiosity about nature and teach them the value of protecting wildlife. Moreover zoos often provide educational programs that make learning more engaging. 3. Why do children like animals?为什么孩子们喜欢动物? Children like animals because they find them cute and interesting. Many animals are playful, which makes children feel happy and excited. Also, kids often see animals in cartoons or storybooks, so they naturally feel cur ious and connected to"
           },
           {
             "question": "How can children learn about animals?",
@@ -1145,11 +1145,11 @@
           },
           {
             "question": "How do people react when they get lost?",
-            "answer": "人们迷路时会有什么反应? People react differently when they get lost. Some may feel anxious and frustrated, especially if they are in an unfamiliar place. Others try to stay cal m and look for solutions, like checking a map or asking for directions. I t really depends on their personality and experience. 1 4. 童 年玩具"
+            "answer": "人们迷路时会有什么反应? People react differently when they get lost. Some may feel anxious and frustrated, especially if they are in an unfamiliar place. Others try to stay cal m and look for solutions, like checking a map or asking for directions. I t really depends on their personality and experience. 1 4.童年玩具"
           },
           {
             "question": "Do boys and girls prefer different kinds of toys?",
-            "answer": "男孩和女孩喜欢不同种类的玩具吗? Tradit ionally, boys and gi rl s tend to prefer di fer en t kinds of toys. For example, boys often like cars or action figures, while girls may choose dolls or art sets. But nowadays, the difference is becoming smaller, because many children enjoy building toys, puzzles, or electronic games regardless of gender. 2.How do toys that were popular in the past compare with toys that are popular now? 过去流行的玩具与现在流行的玩具相比如何? Toys in the past were usually si mpl e and tradi tional, like dol ls, wooden cars, or board games. Nowadays, many toy s are electronic or digital, such as video games and smart robots. Compared with the old ones, modern toys are more interactive, but they may not encourage as much imagination as traditional toys did."
+            "answer": "男孩和女孩喜欢不同种类的玩具吗? Tradit ionally, boys and gi rl s tend to prefer di fer en t kinds of toys. For example, boys often like cars or action figures, while girls may choose dolls or art sets. But nowadays, the difference is becoming smaller, because many children enjoy building toys, puzzles, or electronic games regardless of gender. 2.How do toys that were popular in the past compare with toys that are popular now?过去流行的玩具与现在流行的玩具相比如何? Toys in the past were usually si mpl e and tradi tional, like dol ls, wooden cars, or board games. Nowadays, many toy s are electronic or digital, such as video games and smart robots. Compared with the old ones, modern toys are more interactive, but they may not encourage as much imagination as traditional toys did."
           },
           {
             "question": "What should people consider when choosing a toy for a child?",
@@ -1157,7 +1157,7 @@
           },
           {
             "question": "Should kids be permitted to pick their own toys at a toy store?",
-            "answer": "孩子们应该被允许在玩具店挑选自己的玩具吗? Yes, I think ki ds should be allowed to pick their own toys, because it gives thema sense of independence and choice. However, parents should guide them to select safe and age-appropriate toys. This way, children can enjoy freedom while stilI learning to make responsible decisions. 1 5. 优 质服 务"
+            "answer": "孩子们应该被允许在玩具店挑选自己的玩具吗? Yes, I think ki ds should be allowed to pick their own toys, because it gives thema sense of independence and choice. However, parents should guide them to select safe and age-appropriate toys. This way, children can enjoy freedom while stilI learning to make responsible decisions. 1 5.优质服务"
           },
           {
             "question": "Do you think expensive services are necessarily good services?",
@@ -1194,11 +1194,11 @@
           },
           {
             "question": "Do people in your country like to apologize?",
-            "answer": "你 们国家的人喜欢道歉吗? Yes, I think people in my country are generally willing to apologize, especially in daily life situations like bumping into someone on the street. Saying sorry is ofter seen as a polite gesture rather thana big admission of guilt. However, in more serious cases, some people may hesitate because they worry about losing face."
+            "answer": "你们国家的人喜欢道歉吗? Yes, I think people in my country are generally willing to apologize, especially in daily life situations like bumping into someone on the street. Saying sorry is ofter seen as a polite gesture rather thana big admission of guilt. However, in more serious cases, some people may hesitate because they worry about losing face."
           },
           {
             "question": "Are words more important than deeds?",
-            "answer": "I think deeds are usually more important than words, because actions show real commitment. For example, promising to help is good, but actually helping means much more. Still, words also matter in building trust, but without actions they can feel empty. 4.Are there people who apologize and acknowledge responsibility for their faults? 有人道歉并承认对自己的错误负责吗? Yes, of course. Many people do apologize and take responsibil ity when they make mistakes, especially in professional settings like workplaces. Such behavior shows maturity and helps to rebuild trust. in fact, admitting fault s often makes relationships stronger rather than weaker."
+            "answer": "I think deeds are usually more important than words, because actions show real commitment. For example, promising to help is good, but actually helping means much more. Still, words also matter in building trust, but without actions they can feel empty. 4.Are there people who apologize and acknowledge responsibility for their faults?有人道歉并承认对自己的错误负责吗? Yes, of course. Many people do apologize and take responsibil ity when they make mistakes, especially in professional settings like workplaces. Such behavior shows maturity and helps to rebuild trust. in fact, admitting fault s often makes relationships stronger rather than weaker."
           }
         ]
       },
@@ -1220,7 +1220,7 @@
           },
           {
             "question": "Why do people learn foreign languages?",
-            "answer": "People learn foreign languages for many reasons. Some do it for practical purposes, l ike studying abroad or finding better job opportunities. Others learn because they enjoy foreign culture, movies, or music. I n gener al, learning a new language opens doors to communication and broadens people's horizons. 3.At what age do you think is the best time for people to learn a foreign 你认为人们学习外语的最佳年龄是什么时候? I think the best time to learn a foreign language is during childhood, because young children pick up sounds and vocabulary much faster. They are also less afraid of making mistakes, which makes learning more natural. However adults can still succeed if they stay motivate d and practice regularly 4.What methods should teachers use to make language learning more i nteresting? 教师应该用什么方法让语言学习更有趣? Teachers can make l anguage learning more interesting by using interactive activities, such as role-plays or group discussions.They should als o bring in real-life materials like songs movies, or news articles to make lessons more engaging. In addition, incorporating technology, such as apps or online games, can motivate students to practice outside the classroom."
+            "answer": "People learn foreign languages for many reasons. Some do it for practical purposes, l ike studying abroad or finding better job opportunities. Others learn because they enjoy foreign culture, movies, or music. I n gener al, learning a new language opens doors to communication and broadens people's horizons. 3.At what age do you think is the best time for people to learn a foreign 你认为人们学习外语的最佳年龄是什么时候? I think the best time to learn a foreign language is during childhood, because young children pick up sounds and vocabulary much faster. They are also less afraid of making mistakes, which makes learning more natural. However adults can still succeed if they stay motivate d and practice regularly 4.What methods should teachers use to make language learning more i nteresting?教师应该用什么方法让语言学习更有趣? Teachers can make l anguage learning more interesting by using interactive activities, such as role-plays or group discussions.They should als o bring in real-life materials like songs movies, or news articles to make lessons more engaging. In addition, incorporating technology, such as apps or online games, can motivate students to practice outside the classroom."
           }
         ]
       },
@@ -1236,11 +1236,11 @@
         "part3Questions": [
           {
             "question": "Do you think it's good or bad for people to show feelings openly?",
-            "answer": "你 认为人们公开表达感情是好是坏? Overall, it's mostly good, because appropriate openness builds trust and reduces misunderstandings, when people nam e their feelings, other s can respond constructively."
+            "answer": "你认为人们公开表达感情是好是坏? Overall, it's mostly good, because appropriate openness builds trust and reduces misunderstandings, when people nam e their feelings, other s can respond constructively."
           },
           {
             "question": "Who tend to show their feelings more openly, adults or children?",
-            "answer": "谁更倾向于公开表达自己的感受， 成 年人还是孩子? Generally, children show feelings more openly because they have less impulse control and fewer social filters; they laugh, cry or complain right away. Adults, by contrast, often manage emotions due to social norms and workplace expectations. 3.Regardi ng showing emotions, are there any differences between women and men? 在表达情感方面， 男女之间有什么不同吗? On average, yes - mainly because of socialisation. Women are often encouraged to verbalise feelings and seek support, while men are pushed toward restraint or express emotions through actions, humour, or problem-solving."
+            "answer": "谁更倾向于公开表达自己的感受，成年人还是孩子? Generally, children show feelings more openly because they have less impulse control and fewer social filters; they laugh, cry or complain right away. Adults, by contrast, often manage emotions due to social norms and workplace expectations. 3.Regardi ng showing emotions, are there any differences between women and men?在表达情感方面，男女之间有什么不同吗? On average, yes - mainly because of socialisation. Women are often encouraged to verbalise feelings and seek support, while men are pushed toward restraint or express emotions through actions, humour, or problem-solving."
           }
         ]
       },
@@ -1271,7 +1271,7 @@
           },
           {
             "question": "How did people pay in the past, and how do they pay now?",
-            "answer": "人们过去是如何付款的， 现 在又是如何付款? In the past, people mostly paid with cash and cheques, and for larger purchases everything was paper-based and slower. Today, they used bank transfers contactless cards, mobi le wallets/QR codes, and instant bank transfers are common w th buy-now-pay-later options and biometric or two-factor check s making payments fast yet secure."
+            "answer": "人们过去是如何付款的，现在又是如何付款? In the past, people mostly paid with cash and cheques, and for larger purchases everything was paper-based and slower. Today, they used bank transfers contactless cards, mobi le wallets/QR codes, and instant bank transfers are common w th buy-now-pay-later options and biometric or two-factor check s making payments fast yet secure."
           },
           {
             "question": "What are the downsides of mobile payments?",
@@ -1279,7 +1279,7 @@
           },
           {
             "question": "How do young people shop compared to older people?",
-            "answer": "与老年人相比， 年轻人如何购物? Young people are mobile-first and omnichannel: they discover products via social media/short videos, compare prices in apps, pay with mobile wallets/BNPL, and expect fast delivery with easy returns. Older shoppers, by contrast, prefer in-store for fit-and-feel and trust, use loyalty cards and credit/cash, seek staff advice, and often research online but buy in store."
+            "answer": "与老年人相比，年轻人如何购物? Young people are mobile-first and omnichannel: they discover products via social media/short videos, compare prices in apps, pay with mobile wallets/BNPL, and expect fast delivery with easy returns. Older shoppers, by contrast, prefer in-store for fit-and-feel and trust, use loyalty cards and credit/cash, seek staff advice, and often research online but buy in store."
           }
         ]
       },
@@ -1292,7 +1292,7 @@
             "And explain why your family has kept it for so long",
             "What makes it special is not the price but the craftsmanship and stories attached to"
           ],
-          "sampleAnswer": "描述一件在你家里已经存在很长时间的 旧东西 How long it has been in your family An old thing that has been in my family for a long time is a smal ljade pendant that l inherited from my grandmother. I first saw it when I was a child and she later gave it to me as a keepsake. lt's oval and pale-green, slightly translucent with a soft patina from years of wear. If you hold it up to the light,it almost glows.There's a fine carved cloud motif on one side and a tiny plum blossom on the other, and it hangs from a red silk cord. There's also a hairline crack near the edge, which somehow makes it feel even more I t has bee n in my family for nearly seventy years. My great-grandfather gave it to my grandmother in the 1950s when she starte d college; later it was passed to my mother after her wedding, and to me on my eighteenth birthday. We tend to wear it at family milestones, like graduations or New Year gatherings. it. My grandmother wore it to her first job interview and called it her “good-luck piece.“ For me, it symbolizes resilience and continuity -a reminder to stay calm and work hard, whatever happens. I plan to keep it safe and pass it on to the next"
+          "sampleAnswer": "描述一件在你家里已经存在很长时间的旧东西 How long it has been in your family An old thing that has been in my family for a long time is a smal ljade pendant that l inherited from my grandmother. I first saw it when I was a child and she later gave it to me as a keepsake. lt's oval and pale-green, slightly translucent with a soft patina from years of wear. If you hold it up to the light,it almost glows.There's a fine carved cloud motif on one side and a tiny plum blossom on the other, and it hangs from a red silk cord. There's also a hairline crack near the edge, which somehow makes it feel even more I t has bee n in my family for nearly seventy years. My great-grandfather gave it to my grandmother in the 1950s when she starte d college; later it was passed to my mother after her wedding, and to me on my eighteenth birthday. We tend to wear it at family milestones, like graduations or New Year gatherings. it. My grandmother wore it to her first job interview and called it her “good-luck piece.“ For me, it symbolizes resilience and continuity -a reminder to stay calm and work hard, whatever happens. I plan to keep it safe and pass it on to the next"
         },
         "part3Questions": [
           {
@@ -1301,7 +1301,7 @@
           },
           {
             "question": "Why do people keep old things?",
-            "answer": "为什么人 们保留 旧东西? People keep old things because they carry memory and identity - heirloom s and memorabilia preserve family stories, a sense of continuity, and even cultural belonging. They also do it for practical and economic reasons: older items often have better craftsmanship, are repairable may retain or gain value, and reusing them is more sustainable than buying new."
+            "answer": "为什么人们保留旧东西? People keep old things because they carry memory and identity - heirloom s and memorabilia preserve family stories, a sense of continuity, and even cultural belonging. They also do it for practical and economic reasons: older items often have better craftsmanship, are repairable may retain or gain value, and reusing them is more sustainable than buying new."
           },
           {
             "question": "Do young people like old things?",
@@ -1327,11 +1327,11 @@
         "part3Questions": [
           {
             "question": "What are advantages of making friends at different life stages?",
-            "answer": "在不同的人生阶段交朋友有什么好处? Making friends at different life stages expands your perspective and social capital: older friends offer mentorship and hard-won wisdom, peers give solidarity, and younger friends keep you curious and current. This diversity buffers life transitionsstudy, jobs, parenting or retirement - and creates bridging ties for opportunities and collaboration, so you don't get stuck in an ech o chamber. 2.Do you think it is better for children to have a few close friends or cas ual friends? 你认为孩子们最好有几个亲密的朋友还是随便的朋友? I'd lean toward a few close friends as a child's core, because stable, trusting relationships build emotional security, confict-resolution skills and prosocial behaviour.That said, a small number of casual friends is healthy for social exposure and flexibility - so the ideal is a tight inner circle with a looser outer circle. 3.Do you think a child's relationship with fiends can be repl aced by that with other people, like parents or other family members? 你认为孩子与朋友的关系可以被与其他人的关系所取代吗，比如父母或其他家庭 Not really. Parents give attachment, guidance and a secure base, bu t friendships are equal-status and teach perspective-taking, boundary-setting and conflict negotiation - skills a child can' tfully practise with adults. ideally they complement each other: a strong fami l y \"safety net” plus a small circle of close friends builds autonomy,resilience and a sense of belonging beyond home."
+            "answer": "在不同的人生阶段交朋友有什么好处? Making friends at different life stages expands your perspective and social capital: older friends offer mentorship and hard-won wisdom, peers give solidarity, and younger friends keep you curious and current. This diversity buffers life transitionsstudy, jobs, parenting or retirement - and creates bridging ties for opportunities and collaboration, so you don't get stuck in an ech o chamber. 2.Do you think it is better for children to have a few close friends or cas ual friends?你认为孩子们最好有几个亲密的朋友还是随便的朋友? I'd lean toward a few close friends as a child's core, because stable, trusting relationships build emotional security, confict-resolution skills and prosocial behaviour.That said, a small number of casual friends is healthy for social exposure and flexibility - so the ideal is a tight inner circle with a looser outer circle. 3.Do you think a child's relationship with fiends can be repl aced by that with other people, like parents or other family members?你认为孩子与朋友的关系可以被与其他人的关系所取代吗，比如父母或其他家庭 Not really. Parents give attachment, guidance and a secure base, bu t friendships are equal-status and teach perspective-taking, boundary-setting and conflict negotiation - skills a child can' tfully practise with adults. ideally they complement each other: a strong fami l y \"safety net” plus a small circle of close friends builds autonomy,resilience and a sense of belonging beyond home."
           },
           {
             "question": "Is it possible that employees make friends with their boss? How do chi",
-            "answer": "ldren make friends? 员工有可能和老板交朋友吗? 孩子们是如何交朋友的? Yes - friendship is possible as long as both sides keep professional boundaries and manage the power dynamics. It works bes t in flat teams with transparent f edback; otherwise it risks favouritism or conflicts of interest. Mostly through proximity and share d play- classmates, neighbours, clubs -where repeated games build trust and belonging. Simple prosocial moves like sharing, turn-taking, and copyin g each other s interests quickly turn into friendships."
+            "answer": "ldren make friends?员工有可能和老板交朋友吗?孩子们是如何交朋友的? Yes - friendship is possible as long as both sides keep professional boundaries and manage the power dynamics. It works bes t in flat teams with transparent f edback; otherwise it risks favouritism or conflicts of interest. Mostly through proximity and share d play- classmates, neighbours, clubs -where repeated games build trust and belonging. Simple prosocial moves like sharing, turn-taking, and copyin g each other s interests quickly turn into friendships."
           }
         ]
       },
@@ -1344,7 +1344,7 @@
             "What creative work he/she does",
             "And explain why you admire him/her"
           ],
-          "sampleAnswer": "person whose work you admire(e.g.artist s or 描 述一个你欣赏其作品的有创造力的人 (例如艺术家或音乐家) How you knew him / her A creative person whose work I truly admire is Yayoi Kusama, the Japanese contemporary artist best known for her polka dots and immersive \"infinity\" rooms. Her practice cuts across painting, sculpture, instal lation and performance. I first discovered her in a short documentary at university, and l ater I visite d a touring exhibition in my city. Walking into a mi rrored room filled with glowing dots felt like stepping into a different universe; it was playful yet strangely contemplative. Kusama build s site-specific installations that transform ordinary space s with repetition, symmetry, and high- saturation palettes - pumpkins, dots and mirrored panels that seem to extend forever. She also publishes drawings and soft sculptures that blur the line between fin e art and design, inviting viewers to participate rather l admire her because she turns personal struggles into radically accessible art, proving that creativity can be both serious and joyful. Her discipline and consistency inspire me to take measured risks in my own projects, and her audience-first approach reminds me that great work can comfort connect, and challenge at the same time."
+          "sampleAnswer": "person whose work you admire(e.g.artist s or 描述一个你欣赏其作品的有创造力的人 (例如艺术家或音乐家) How you knew him / her A creative person whose work I truly admire is Yayoi Kusama, the Japanese contemporary artist best known for her polka dots and immersive \"infinity\" rooms. Her practice cuts across painting, sculpture, instal lation and performance. I first discovered her in a short documentary at university, and l ater I visite d a touring exhibition in my city. Walking into a mi rrored room filled with glowing dots felt like stepping into a different universe; it was playful yet strangely contemplative. Kusama build s site-specific installations that transform ordinary space s with repetition, symmetry, and high- saturation palettes - pumpkins, dots and mirrored panels that seem to extend forever. She also publishes drawings and soft sculptures that blur the line between fin e art and design, inviting viewers to participate rather l admire her because she turns personal struggles into radically accessible art, proving that creativity can be both serious and joyful. Her discipline and consistency inspire me to take measured risks in my own projects, and her audience-first approach reminds me that great work can comfort connect, and challenge at the same time."
         },
         "part3Questions": [
           {
@@ -1375,11 +1375,11 @@
           },
           {
             "question": "Do power outages happen frequently in your city?",
-            "answer": "你 们城市经常停电吗? No, power outages don't happen frequently in my city. The electricity system is quite rel iable, and blackouts only occur during extreme weather like typhoons or heavy storms. In general, the local government has invested a lot in infrast ructure, so the supply is stable and people rarely experience interruptions."
+            "answer": "你们城市经常停电吗? No, power outages don't happen frequently in my city. The electricity system is quite rel iable, and blackouts only occur during extreme weather like typhoons or heavy storms. In general, the local government has invested a lot in infrast ructure, so the supply is stable and people rarely experience interruptions."
           },
           {
             "question": "Is electricity expensive in the place where you live?",
-            "answer": "I wouldn't say electricity is very expensive in my city, but the price has gone up a little in recent years. It s still affordable for most households, although in the summer, when people use air conditioners a lot, the bills can be quite high. Overall, I think the cost is reasonable compared with people's income. 4.Do you think people will prefer electric bi cycles or ordinary bicycles in the future? 你认为未来人们会更喜欢电动自行车还是普通自行车? I think electric bicycles will become more popular in the future because they are faster and more convenient, especially for commuting in big cities. Ordinary bicycles, however, will still have their place, since they are cheaper and give people more exercise. Overall, I believe e-bikes will dominate urban transport, while traditional bikes will be preferred for leisure and fitness."
+            "answer": "I wouldn't say electricity is very expensive in my city, but the price has gone up a little in recent years. It s still affordable for most households, although in the summer, when people use air conditioners a lot, the bills can be quite high. Overall, I think the cost is reasonable compared with people's income. 4.Do you think people will prefer electric bi cycles or ordinary bicycles in the future?你认为未来人们会更喜欢电动自行车还是普通自行车? I think electric bicycles will become more popular in the future because they are faster and more convenient, especially for commuting in big cities. Ordinary bicycles, however, will still have their place, since they are cheaper and give people more exercise. Overall, I believe e-bikes will dominate urban transport, while traditional bikes will be preferred for leisure and fitness."
           }
         ]
       },
@@ -1399,7 +1399,7 @@
           },
           {
             "question": "Do factories usually rely on machines or manual labor for production?",
-            "answer": "工厂通常依靠机器还是体力劳动进行生产? Nowadays, most factories rely heavily on machines because automation makes production faster, cheaper, and more consistent. However manual labor is still important in areas that require delicate skills, quality control or creativity, such as handicrafts or luxury goods. So l'd say machines dominate mass production, while human worker s add value in specialized fields. 3.Which do you think is better for production: usin g machines or making things by hand? Why? 你认为哪一种更适合生产： 使 用机器还是手工制作? 为什么? I think using machines is generally better for production because they make the process faster, cheaper, and more consistent. But handmade product s still have their value, especially when it comes to craftsmanship, uniqueness, and cultural meaning. Overall, machines are better for mass production, while handmade items are better for personal or artistic purposes."
+            "answer": "工厂通常依靠机器还是体力劳动进行生产? Nowadays, most factories rely heavily on machines because automation makes production faster, cheaper, and more consistent. However manual labor is still important in areas that require delicate skills, quality control or creativity, such as handicrafts or luxury goods. So l'd say machines dominate mass production, while human worker s add value in specialized fields. 3.Which do you think is better for production: usin g machines or making things by hand? Why?你认为哪一种更适合生产：使用机器还是手工制作?为什么? I think using machines is generally better for production because they make the process faster, cheaper, and more consistent. But handmade product s still have their value, especially when it comes to craftsmanship, uniqueness, and cultural meaning. Overall, machines are better for mass production, while handmade items are better for personal or artistic purposes."
           }
         ]
       },
@@ -1448,7 +1448,7 @@
         "part3Questions": [
           {
             "question": "Do young people like old things?",
-            "answer": "I think it really depends. Some young people enjoy old things like vintage clothes or traditional furniture because they feel unique and meaningful. But many prefer modern items, s nce they are usually more convenient and fashionable. So, it often comes down to personal taste and lifestyle. 2.What do you think are the different of between the things that young people and elder people prefer? 你认为年轻人和老年人喜欢的东西有什么不同? I think young people usually prefer modern and trend y things, like the latest smartphones, fashionable clothes, or fast entertainment. Older people, on the other hand, often value practicality and durability, such as comfortable furniture or traditional food. These differences mainly com e from their lifestyles and prior ties at diferent stages of life."
+            "answer": "I think it really depends. Some young people enjoy old things like vintage clothes or traditional furniture because they feel unique and meaningful. But many prefer modern items, s nce they are usually more convenient and fashionable. So, it often comes down to personal taste and lifestyle. 2.What do you think are the different of between the things that young people and elder people prefer?你认为年轻人和老年人喜欢的东西有什么不同? I think young people usually prefer modern and trend y things, like the latest smartphones, fashionable clothes, or fast entertainment. Older people, on the other hand, often value practicality and durability, such as comfortable furniture or traditional food. These differences mainly com e from their lifestyles and prior ties at diferent stages of life."
           },
           {
             "question": "Why do people like to go to museums?",
@@ -1477,7 +1477,7 @@
           },
           {
             "question": "What kind of sports are unsuitable for children? Why?",
-            "answer": "什么样的运动不适合孩子? 为什么? I think high-ris k sports like boxing, wrestling, or extreme activ ties such as rock climbing are unsuitable for children. The mai n reason is that their bodie s are still developing, so serious i njuries could affect their growth. Also, these sports often require strong self-control and professional training, which young kid s usually don'"
+            "answer": "什么样的运动不适合孩子?为什么? I think high-ris k sports like boxing, wrestling, or extreme activ ties such as rock climbing are unsuitable for children. The mai n reason is that their bodie s are still developing, so serious i njuries could affect their growth. Also, these sports often require strong self-control and professional training, which young kid s usually don'"
           }
         ]
       },
@@ -1557,7 +1557,7 @@
           },
           {
             "question": "When will equipment break normally? Why?",
-            "answer": "设备什么时候会正常损坏? 为什么? Well, equipment usually breaks after being used for a long time, especially if it's not maintained properly. For example, machines often wear out because of constant friction or poor quality parts. So in most cases, it's a mix of age, heavy use, and lack of care that causes equipment to stop working"
+            "answer": "设备什么时候会正常损坏?为什么? Well, equipment usually breaks after being used for a long time, especially if it's not maintained properly. For example, machines often wear out because of constant friction or poor quality parts. So in most cases, it's a mix of age, heavy use, and lack of care that causes equipment to stop working"
           },
           {
             "question": "What are the reasons that something gets broken?",
@@ -1565,7 +1565,7 @@
           },
           {
             "question": "Do people buy a new one when something is broken?",
-            "answer": "当东西坏了，人 们会买新的吗? Itreally depends on the item. If something is cheap, like a phone charger or a kettle, people usually just buy a new one because repai ring it costs more time and money. But if it's expensive such as a smartphone or a washing machine, they might try to fix it first before deciding to replace it."
+            "answer": "当东西坏了，人们会买新的吗? Itreally depends on the item. If something is cheap, like a phone charger or a kettle, people usually just buy a new one because repai ring it costs more time and money. But if it's expensive such as a smartphone or a washing machine, they might try to fix it first before deciding to replace it."
           }
         ]
       }
@@ -1596,7 +1596,7 @@
           },
           {
             "question": "Why are some children more intelligent than others?",
-            "answer": "为什么有些孩子比其他孩子聪明? There are several reasons to explain this. One of the most likely reasons is that they were born with a strong talent. A talent person will always leave an impression on others tha the or she is truly intelligent. i've seen quite a lot of children who have had an agi le mind ever since they were little. Perhaps this could onl y be justified by considering some genetic factors. But there are some other reasons of course. Constantly being hard-working might be another reason for explaining why someone is intelligent, which is especially the case in the current education system in which we all think'practice makes perfect. That means, if one keeps doing practice, he or she could stand out against others. So I think this quest ion can onl y be answered on a case-by-case basis. 5.Who do you think plays a more important role in a child's development, teachers or parents? 你认为谁在孩子的成长中更重要，老师还是家长? I cannot categorically tell you who is more important. I n most cases they are equally important, because each of the m play di fferent but equally crucial role s for children. For teachers, I think they should be responsible for imparting knowledge to the children, which might not be easily don e by their But on the other hand, parents could play indi spensable roles in terms of offering some essential mental supports to their children. Thi s is especially important for those children who need extra car e from the adults, and parents obviously would take the demand of children in this regard more seriously than teachers do. So I cannot tell you who is more important than the other."
+            "answer": "为什么有些孩子比其他孩子聪明? There are several reasons to explain this. One of the most likely reasons is that they were born with a strong talent. A talent person will always leave an impression on others tha the or she is truly intelligent. i've seen quite a lot of children who have had an agi le mind ever since they were little. Perhaps this could onl y be justified by considering some genetic factors. But there are some other reasons of course. Constantly being hard-working might be another reason for explaining why someone is intelligent, which is especially the case in the current education system in which we all think'practice makes perfect. That means, if one keeps doing practice, he or she could stand out against others. So I think this quest ion can onl y be answered on a case-by-case basis. 5.Who do you think plays a more important role in a child's development, teachers or parents?你认为谁在孩子的成长中更重要，老师还是家长? I cannot categorically tell you who is more important. I n most cases they are equally important, because each of the m play di fferent but equally crucial role s for children. For teachers, I think they should be responsible for imparting knowledge to the children, which might not be easily don e by their But on the other hand, parents could play indi spensable roles in terms of offering some essential mental supports to their children. Thi s is especially important for those children who need extra car e from the adults, and parents obviously would take the demand of children in this regard more seriously than teachers do. So I cannot tell you who is more important than the other."
           },
           {
             "question": "Do you think smart people tend to be selfish?",
@@ -1644,7 +1644,7 @@
           "cueCard": [
             "And explain how you feel about the experience"
           ],
-          "sampleAnswer": "描述一个你最开始不喜欢， 但 最后成为朋友的人 Why you disliked her/him at first bu t changed your mind I want to share with an experience regarding how I became friends with Frank, a person l used to hate so much. Bac k in the primary school when I bumped into him, I would say he truly left a very terrible impression on m e because he was very aggressive and offensive al the times. No matter what I said, he would immedi ately argue with m e even though he was obvi ousl y wrong while I was right. The reason why we become friends with each other was because I accidentally found that he is a person with a strong problem-solving skill, something at which I am never good. It wasn't until 3 years ag o that I came to realise his specialty in this regard. There was a day when we had a very nice mountaineering tri p in order to see the shooting star. We started from the city center at around 4am and we came all the way up to the mountainous area. Initially I didn't talk to him as he was constantly giving instructions to us in an unfriendly manner. When we were nearly half way through it, we got lost in an intersection. I would say it is a place in the middle of nowhere, in which you could hardly resort to anyone to help you. But what surprised me the most was that it only took Frank 3 mins to navigate through such a complex and geographically i solated area. If my memory serves me, he applied som e essential geography knowledge he had picked up from the class like how to rely on the compass to find a wa you t in a place not covering by the electronic map. Normally speaking, children wouldn't be able to do this in a way as he did. Finally, we came all the way back to where we started safely, but we would not have been able to make it without his wisdom. For once in my life, I expressed gratitude for him, and we soon became friends with each other."
+          "sampleAnswer": "描述一个你最开始不喜欢，但最后成为朋友的人 Why you disliked her/him at first bu t changed your mind I want to share with an experience regarding how I became friends with Frank, a person l used to hate so much. Bac k in the primary school when I bumped into him, I would say he truly left a very terrible impression on m e because he was very aggressive and offensive al the times. No matter what I said, he would immedi ately argue with m e even though he was obvi ousl y wrong while I was right. The reason why we become friends with each other was because I accidentally found that he is a person with a strong problem-solving skill, something at which I am never good. It wasn't until 3 years ag o that I came to realise his specialty in this regard. There was a day when we had a very nice mountaineering tri p in order to see the shooting star. We started from the city center at around 4am and we came all the way up to the mountainous area. Initially I didn't talk to him as he was constantly giving instructions to us in an unfriendly manner. When we were nearly half way through it, we got lost in an intersection. I would say it is a place in the middle of nowhere, in which you could hardly resort to anyone to help you. But what surprised me the most was that it only took Frank 3 mins to navigate through such a complex and geographically i solated area. If my memory serves me, he applied som e essential geography knowledge he had picked up from the class like how to rely on the compass to find a wa you t in a place not covering by the electronic map. Normally speaking, children wouldn't be able to do this in a way as he did. Finally, we came all the way back to where we started safely, but we would not have been able to make it without his wisdom. For once in my life, I expressed gratitude for him, and we soon became friends with each other."
         },
         "part3Questions": [
           {
@@ -1653,7 +1653,7 @@
           },
           {
             "question": "Is it a good idea to make friends who are much older than you? Do",
-            "answer": "people like to make friends with elder people or young people? 交比你年长很多的朋友是个好主意吗? 人们喜欢和老年人交朋友还是和年轻人 Absolutely yes. It is generally believed that being older could to some extent be equivalent with being more experienced. For instance, some elderly people are very knowledgeable because they v e been through loads of things that young people wouldn't access easi ly in their life. So making old friends could enrich our knowledge base. But this could also be l ess entertaining. The truth is that, the generat ion gap between people in di fferent age groups might result in different tastes and preferences. That means, something can attract a young person might not necessarily attract an old person. So if they make friends with each other, a lac k of common topic s might not sustain their friendship."
+            "answer": "people like to make friends with elder people or young people?交比你年长很多的朋友是个好主意吗?人们喜欢和老年人交朋友还是和年轻人 Absolutely yes. It is generally believed that being older could to some extent be equivalent with being more experienced. For instance, some elderly people are very knowledgeable because they v e been through loads of things that young people wouldn't access easi ly in their life. So making old friends could enrich our knowledge base. But this could also be l ess entertaining. The truth is that, the generat ion gap between people in di fferent age groups might result in different tastes and preferences. That means, something can attract a young person might not necessarily attract an old person. So if they make friends with each other, a lac k of common topic s might not sustain their friendship."
           },
           {
             "question": "Why do some people think it is difficult to make friends?",
@@ -1681,11 +1681,11 @@
           },
           {
             "question": "Should children learn instruments when they are young? Is it necessary",
-            "answer": "for school to set some music courses? 孩子们应该在小时候就学习乐器吗? 学校设置音乐课是必要的吗? I think yes, but not on a compulsory basis. On the one hand, learning instruments is one of the most effective ways to stimulate children's creativity and imagination. Through learning how to pla y drums, for instance, children are able to grasp the lovely melodies created by themselves. In this way, they are able to create some new melodies as they try more and more types of instruments, thereby improving their creativity and imagination levels. But on the other hand, I don't think it should be a compulsory course. The truth is that, not every child is talented in music. If we force children to do it, it might be counterproductive to their cognitive development. I've seen some children who are constantly depressed because of a lack of talent in music. But if learning instrument is an optional but not required course for them, they would be able to choose whether this is something that they truly like or not."
+            "answer": "for school to set some music courses?孩子们应该在小时候就学习乐器吗?学校设置音乐课是必要的吗? I think yes, but not on a compulsory basis. On the one hand, learning instruments is one of the most effective ways to stimulate children's creativity and imagination. Through learning how to pla y drums, for instance, children are able to grasp the lovely melodies created by themselves. In this way, they are able to create some new melodies as they try more and more types of instruments, thereby improving their creativity and imagination levels. But on the other hand, I don't think it should be a compulsory course. The truth is that, not every child is talented in music. If we force children to do it, it might be counterproductive to their cognitive development. I've seen some children who are constantly depressed because of a lack of talent in music. But if learning instrument is an optional but not required course for them, they would be able to choose whether this is something that they truly like or not."
           },
           {
             "question": "Why do people listen to music?",
-            "answer": "为什么人 们会听音乐? I think different people have different reasons For som e people,listening to music is one of the most effective way s to release their emotions. You know we are liv ng in a hectic world in which the accumulation of negative emotions have truly crashed people down emotional ly. That means, we do need to find a way to alleviate ou r negative feelings. Obviously, listening to music is an effective way in this regard because its lovely melody and fantastic lyrics can truly level people's spirits up. But for others, listening to music might not be their voluntary actions. Lets consider some short video makers. The reason why they always need to listen to music is because they need to choose the right music for their videos. You know sometimes a nice piece of music could guarantee the quality of videos, thereby i ncreasing a lot of fans."
+            "answer": "为什么人们会听音乐? I think different people have different reasons For som e people,listening to music is one of the most effective way s to release their emotions. You know we are liv ng in a hectic world in which the accumulation of negative emotions have truly crashed people down emotional ly. That means, we do need to find a way to alleviate ou r negative feelings. Obviously, listening to music is an effective way in this regard because its lovely melody and fantastic lyrics can truly level people's spirits up. But for others, listening to music might not be their voluntary actions. Lets consider some short video makers. The reason why they always need to listen to music is because they need to choose the right music for their videos. You know sometimes a nice piece of music could guarantee the quality of videos, thereby i ncreasing a lot of fans."
           },
           {
             "question": "Do you agree that everyone could be a good singer?",
@@ -1706,7 +1706,7 @@
         "part3Questions": [
           {
             "question": "Why do people like to watch comedies? Why do people make others",
-            "answer": "为什么人们喜欢看喜剧? 为什么人们会让别人笑? One of the main reasons is that watching comedies can truly release our pressures. Through watching some hilarious plots, people are able to deeply relax their nerves This is especially important for those people who are overwhelmed by their daily tasks, and they truly nee d some f nny things to flavour their life with laugh and relaxation."
+            "answer": "为什么人们喜欢看喜剧?为什么人们会让别人笑? One of the main reasons is that watching comedies can truly release our pressures. Through watching some hilarious plots, people are able to deeply relax their nerves This is especially important for those people who are overwhelmed by their daily tasks, and they truly nee d some f nny things to flavour their life with laugh and relaxation."
           },
           {
             "question": "Is it important for teacher to tell jokes in the class?",
@@ -1742,7 +1742,7 @@
           },
           {
             "question": "Do schools have the responsibility to provide health education? What",
-            "answer": "activities can school organize for children to keep fit? What can parents do to help improve their children's health awareness? 学校有责任提供健康教育吗? /学校可以组织孩子进行哪些活动保持健康? /父 母可以怎样提升孩子的健康意识? I think schools are partly responsible for being a health education provider. We all know that the function of schools is to provide the essential knowledge for students, the scope of which goes beyond simply the academic knowledge and should include the health-related courses. For instance, the PE class is one of the compulsory courses that schools have to provide for students, without which students might not be able to balance their study and life. Butl don'tthink schools should assume all the responsibilities in this regard. By that I mean others, including both students themselves and their parents, should also be responsible for this. Sometimes simply being health-conscious might work far more effectively than relying on the education to keep fit. I've seen quite a lot students who have been keeping up with doing regular exercise for ages, without any supervision from their schools."
+            "answer": "activities can school organize for children to keep fit? What can parents do to help improve their children's health awareness?学校有责任提供健康教育吗? /学校可以组织孩子进行哪些活动保持健康? /父母可以怎样提升孩子的健康意识? I think schools are partly responsible for being a health education provider. We all know that the function of schools is to provide the essential knowledge for students, the scope of which goes beyond simply the academic knowledge and should include the health-related courses. For instance, the PE class is one of the compulsory courses that schools have to provide for students, without which students might not be able to balance their study and life. Butl don'tthink schools should assume all the responsibilities in this regard. By that I mean others, including both students themselves and their parents, should also be responsible for this. Sometimes simply being health-conscious might work far more effectively than relying on the education to keep fit. I've seen quite a lot students who have been keeping up with doing regular exercise for ages, without any supervision from their schools."
           },
           {
             "question": "Do you think people are healthier now than in the past?",
@@ -1778,7 +1778,7 @@
           },
           {
             "question": "Why can't people always follow their plans?",
-            "answer": "为什么人 们不能按计划形式? One of the main reasons it that people cannot react to the sudden changes. Since making plans is essentially a way to arrange what we should do in the upcoming future, inevitably something might happen suddenly to prevent people from following their plans. For instance, when there is a more important thing that urgently happens, people will need to prioritise which thing they should do in the first. Dealing with the urgent things first essentially means the fact that they cannot strictly follow their plans. Perhaps this can wel explain why many people are constantly changing their plans."
+            "answer": "为什么人们不能按计划形式? One of the main reasons it that people cannot react to the sudden changes. Since making plans is essentially a way to arrange what we should do in the upcoming future, inevitably something might happen suddenly to prevent people from following their plans. For instance, when there is a more important thing that urgently happens, people will need to prioritise which thing they should do in the first. Dealing with the urgent things first essentially means the fact that they cannot strictly follow their plans. Perhaps this can wel explain why many people are constantly changing their plans."
           }
         ]
       },
@@ -1822,11 +1822,11 @@
           },
           {
             "question": "What qualities should teachers have? Do you think everyone could be a",
-            "answer": "老师应该有什么样的品质? 你 认为每个人都可以成为老师吗? I guess they must be confident enough to express their ideas to the students. Because learning is primar ly concerned with how to communicate with each other. life a teacher is not confident enough to talk to his or her students, how could the students effectively pick up some essential academic skills? On top of that, I think teachers must als o be patient enough. You know, patience is a virtue, isn't it? This is especially important when it comes to how to encourage students to learn academic subjects in an elementary stage, in which inevitably they might come across some setbacks. So I think both confidence and patience are the pre-requisites for becoming a tea c her. 3.Which do you think is more important, practi ca l skills or academic 你认为实践技和学术知识哪个更重要? I cannot realistically tell you which one of them is more important than the other. To some extent, both of the m can be equal ly important because they have totally different values and functions. We all know that academic skills are the touchstone in the current knowledge-driven society, whereas the some practical skills, such as social skills, are also important after the fresh graduates enter the society. I t is too categor ical to argue that one is more important than the other."
+            "answer": "老师应该有什么样的品质?你认为每个人都可以成为老师吗? I guess they must be confident enough to express their ideas to the students. Because learning is primar ly concerned with how to communicate with each other. life a teacher is not confident enough to talk to his or her students, how could the students effectively pick up some essential academic skills? On top of that, I think teachers must als o be patient enough. You know, patience is a virtue, isn't it? This is especially important when it comes to how to encourage students to learn academic subjects in an elementary stage, in which inevitably they might come across some setbacks. So I think both confidence and patience are the pre-requisites for becoming a tea c her. 3.Which do you think is more important, practi ca l skills or academic 你认为实践技和学术知识哪个更重要? I cannot realistically tell you which one of them is more important than the other. To some extent, both of the m can be equal ly important because they have totally different values and functions. We all know that academic skills are the touchstone in the current knowledge-driven society, whereas the some practical skills, such as social skills, are also important after the fresh graduates enter the society. I t is too categor ical to argue that one is more important than the other."
           },
           {
             "question": "Which age group is the best at learning new things? Which stage in life",
-            "answer": "do you think is suitable for learning? 哪个年龄段最擅长学习新东西? 你 认为哪个年龄段最适合学习? I think absolutely the younger group, especially those children in their early childhood. Scientists have found that children in their 4-7 are good at turning the things they ve seen into what they can actual l y do in practice. The underlying reasoning behind it, from my perspective, lies in the fact that children are good at imitating others. Whenever they see anything interesting in their life, they are leaning towards picking it up in their own ways. But this is not the case when it comes to considering the elderly group, who are obviously not quick-learners because of the aging issues,"
+            "answer": "do you think is suitable for learning?哪个年龄段最擅长学习新东西?你认为哪个年龄段最适合学习? I think absolutely the younger group, especially those children in their early childhood. Scientists have found that children in their 4-7 are good at turning the things they ve seen into what they can actual l y do in practice. The underlying reasoning behind it, from my perspective, lies in the fact that children are good at imitating others. Whenever they see anything interesting in their life, they are leaning towards picking it up in their own ways. But this is not the case when it comes to considering the elderly group, who are obviously not quick-learners because of the aging issues,"
           }
         ]
       },
@@ -1840,7 +1840,7 @@
         "part3Questions": [
           {
             "question": "Why do people look at the sky? Why do people like to look at",
-            "answer": "stars/sunri se/sunset? 为什么人 们喜欢看星星/日出/日落? 为什么人们会看天空? I guess different people have different reasons. Some people l ik e it because of the religious val ue of the sky. You know, in some countries, there is a religious belief that watching sky can actually bring us some good fortune. I've noticed that many people, especially old people, tend to follow it so much in their life. Another more obvious reason is that the beauty of sky can truly impress people a lot. Since we can clearly see the clouds, stars as well as sunrise and sunset, watching sky has been a very popular recreational activity across the whole world."
+            "answer": "stars/sunri se/sunset?为什么人们喜欢看星星/日出/日落?为什么人们会看天空? I guess different people have different reasons. Some people l ik e it because of the religious val ue of the sky. You know, in some countries, there is a religious belief that watching sky can actually bring us some good fortune. I've noticed that many people, especially old people, tend to follow it so much in their life. Another more obvious reason is that the beauty of sky can truly impress people a lot. Since we can clearly see the clouds, stars as well as sunrise and sunset, watching sky has been a very popular recreational activity across the whole world."
           },
           {
             "question": "Will people notice the appearance of dark clouds?",
@@ -1852,27 +1852,27 @@
           },
           {
             "question": "Why should people learn about other planets?",
-            "answer": "为什么人 们要了解其他星球? I guess different people have different reasons. Some people are obsessed with other planets because it can stimulate their creativity and imagination. Through exploring different galaxies, planets and stars, they are able to immerse themselves in a world in which everything is in many ways different from what they can often see on the earth. For instance, Some parents like to read some planet-related novels for their young children, which can vastly boost their children's imagination levels. But for other people, like scientist s and astronomers, their purpose is to explore the alternative planet to live in the future. The truth is that, the over-population crisis and the scarcity of energy resources have already pushe d humans to search for other places to which we could possibly relocate. In that sense, learning about other planets is for everyone's sake. 1 1. 二 手 网站"
+            "answer": "为什么人们要了解其他星球? I guess different people have different reasons. Some people are obsessed with other planets because it can stimulate their creativity and imagination. Through exploring different galaxies, planets and stars, they are able to immerse themselves in a world in which everything is in many ways different from what they can often see on the earth. For instance, Some parents like to read some planet-related novels for their young children, which can vastly boost their children's imagination levels. But for other people, like scientist s and astronomers, their purpose is to explore the alternative planet to live in the future. The truth is that, the over-population crisis and the scarcity of energy resources have already pushe d humans to search for other places to which we could possibly relocate. In that sense, learning about other planets is for everyone's sake. 1 1.二手网站"
           },
           {
             "question": "How can food be recycled?",
-            "answer": "I think one of the main ways is that we could make the best use of the remainings of food for a diferent purpose. By that I mean that we could reuse the food that has been left from our 3 meal s everyday in other contexts. For instance, I've seen quite a lot people who like to use the remainings of food as fertilisers for the growth of soil. I think that could be a good idea to sav e resources. 2.Som e people think it's a waste to buy too much clothes for kids, what's your o p in i on? 有人认为给小孩买很多衣服是浪费， 你怎么看? I think it is not necessarily a waste. One the one hand, I got to say that this behaviou r will of course lea d to a waste of money. Since kid s are physically growing stronger and taller with lapse of time, buyi ng too much clothes for them will necessarily lead to a big financial waste.One thing that suits a 5-year-old kid might not suit him or her any longer when he or she is at 7. But sometimes buying too much can actually help children to understand the diversity of dressing styles. I've seen quite a lot children who know how to dress differently on different occasions because theyve got many choices in their wardrobe. If parents didn't buy diverse kinds of clothes for them, they wouldn't have been possible to diversi fy their dressing styles in the first place. So I think it is a mixed bag. 3.Why do som e people buy second-hand clothes, while other s don't like 为什么有人会买二手衣服? I think it is largely determined by people' different consumption attitudes. Some people might place a big emphasis on pursuing the trendy style of the clothes, whereas others might be leaning towards a more economical life pattern when it comes to buying clothes. In the former situations, people might be constantly buyi n g new clothes because that is the only way to keep themselves updated about fashions. In the latter situations by contrast,I think people might be cautious about buying clothes at a greater cost. It makes sense to argue that buying the second-hand clothes is a more cost-effective choice for those people who aim at saving money as much as possible. So I think the question is decided by people's attitudes towards consumption."
+            "answer": "I think one of the main ways is that we could make the best use of the remainings of food for a diferent purpose. By that I mean that we could reuse the food that has been left from our 3 meal s everyday in other contexts. For instance, I've seen quite a lot people who like to use the remainings of food as fertilisers for the growth of soil. I think that could be a good idea to sav e resources. 2.Som e people think it's a waste to buy too much clothes for kids, what's your o p in i on?有人认为给小孩买很多衣服是浪费，你怎么看? I think it is not necessarily a waste. One the one hand, I got to say that this behaviou r will of course lea d to a waste of money. Since kid s are physically growing stronger and taller with lapse of time, buyi ng too much clothes for them will necessarily lead to a big financial waste.One thing that suits a 5-year-old kid might not suit him or her any longer when he or she is at 7. But sometimes buying too much can actually help children to understand the diversity of dressing styles. I've seen quite a lot children who know how to dress differently on different occasions because theyve got many choices in their wardrobe. If parents didn't buy diverse kinds of clothes for them, they wouldn't have been possible to diversi fy their dressing styles in the first place. So I think it is a mixed bag. 3.Why do som e people buy second-hand clothes, while other s don't like 为什么有人会买二手衣服? I think it is largely determined by people' different consumption attitudes. Some people might place a big emphasis on pursuing the trendy style of the clothes, whereas others might be leaning towards a more economical life pattern when it comes to buying clothes. In the former situations, people might be constantly buyi n g new clothes because that is the only way to keep themselves updated about fashions. In the latter situations by contrast,I think people might be cautious about buying clothes at a greater cost. It makes sense to argue that buying the second-hand clothes is a more cost-effective choice for those people who aim at saving money as much as possible. So I think the question is decided by people's attitudes towards consumption."
           },
           {
             "question": "Should the government encourage people to recycle items? How?",
-            "answer": "政府应该鼓励人们回收物品吗? I think absolutely yes. Governmental encouragement is always effective in terms of stimulating people's motivation and enthusiasm. By way of providing some i ncentives for those people who can recycle items in their life, more and more people could respond more actively to the needs of recyclin g items, thereby saving natural resources at a social level. Butl think ci tizens themselves should also be sel f-conscious in this regard. By that l mean sometimes simply reminding ourself of the importance of recycling items would lead to a desirable result, without relying on the encouragement from the government. More importantly, relying overly on the government might not work in a long term. It is unrealistic for any national or local government to constantly encourage citizens to do one thing. 1 2. 设 定 目标"
+            "answer": "政府应该鼓励人们回收物品吗? I think absolutely yes. Governmental encouragement is always effective in terms of stimulating people's motivation and enthusiasm. By way of providing some i ncentives for those people who can recycle items in their life, more and more people could respond more actively to the needs of recyclin g items, thereby saving natural resources at a social level. Butl think ci tizens themselves should also be sel f-conscious in this regard. By that l mean sometimes simply reminding ourself of the importance of recycling items would lead to a desirable result, without relying on the encouragement from the government. More importantly, relying overly on the government might not work in a long term. It is unrealistic for any national or local government to constantly encourage citizens to do one thing. 1 2.设定目标"
           },
           {
             "question": "How do people set a life goal? What does a life goal contain? /What",
-            "answer": "factor ma y inf luence the goals? 人生目标应该包含什么? /哪些因素会影响这些目标? /人们怎么设定人生目 I think there are basically two way s to set a life goal. First of all, we should be clear about what we truly want. If we don't know it, then one might not be able set it in the first place. Once we know what we need, then we should specify what we need to do in order to attain it. Since most life goals might require a reasonable amount of time to be achieved, we should learn to divide them into different stages"
+            "answer": "factor ma y inf luence the goals?人生目标应该包含什么? /哪些因素会影响这些目标? /人们怎么设定人生目 I think there are basically two way s to set a life goal. First of all, we should be clear about what we truly want. If we don't know it, then one might not be able set it in the first place. Once we know what we need, then we should specify what we need to do in order to attain it. Since most life goals might require a reasonable amount of time to be achieved, we should learn to divide them into different stages"
           },
           {
             "question": "Are the goals of every ages the same? Will it change all the time?",
-            "answer": "每个年龄段的目标相同吗? 会一直改变吗? I think it is constantly changing. Si nce people in different age groups usually have different targets, they have to specify different goals so that we can achieve them respectively. For instance, young people will normally set goals to enter the universities in their 20s, whereas old people might focus primarily on their health i ssues. I think it is truly hard to have a general ised goal that remains unchanged during the course of our whole life. However I think there are some goals that are permanent by their very nature.One of the striking instances is love, which might follow us around forever. It makes sense to argue that when we fall in love with someone, we tend to love him or her forever, which is part of our life goals regardless of our ages. Even though time has changed a lot, love is still there. 3. Do people usually set long-term goals or short-term ones? 人们通常会设定长期目标还是短期目标? I think it depends. Some people are leaning towards setting long-term plans, which can truly help them to carry ou t their tasks on track in a long run. Since doing things on a long-term basis relatively involves more uncertainties and unpredictabilities making plans can ensure that people won't get los t in suc h a long process. For instance, some business people will sign long-term contract s with their partners. If they don't do it, they might not be able to foresee every eventualities in their business relationship. So I think making long-term plans can increase security and contribute to the allocation of risk to some extent. But some people prefer to make short-term goals rather than the long-term ones The fact that, sticking to the long-term goals can be quite challenging for those who might are not determined enough. In order to ensure that their goals can be eff ctivel y satisfied, making short-term goal could be a more realistic choice."
+            "answer": "每个年龄段的目标相同吗?会一直改变吗? I think it is constantly changing. Si nce people in different age groups usually have different targets, they have to specify different goals so that we can achieve them respectively. For instance, young people will normally set goals to enter the universities in their 20s, whereas old people might focus primarily on their health i ssues. I think it is truly hard to have a general ised goal that remains unchanged during the course of our whole life. However I think there are some goals that are permanent by their very nature.One of the striking instances is love, which might follow us around forever. It makes sense to argue that when we fall in love with someone, we tend to love him or her forever, which is part of our life goals regardless of our ages. Even though time has changed a lot, love is still there. 3. Do people usually set long-term goals or short-term ones?人们通常会设定长期目标还是短期目标? I think it depends. Some people are leaning towards setting long-term plans, which can truly help them to carry ou t their tasks on track in a long run. Since doing things on a long-term basis relatively involves more uncertainties and unpredictabilities making plans can ensure that people won't get los t in suc h a long process. For instance, some business people will sign long-term contract s with their partners. If they don't do it, they might not be able to foresee every eventualities in their business relationship. So I think making long-term plans can increase security and contribute to the allocation of risk to some extent. But some people prefer to make short-term goals rather than the long-term ones The fact that, sticking to the long-term goals can be quite challenging for those who might are not determined enough. In order to ensure that their goals can be eff ctivel y satisfied, making short-term goal could be a more realistic choice."
           },
           {
             "question": "Why is setting goals important?",
-            "answer": "为什么设定目标 很重要? One of the main reasons is that making plans can ensure that everything can be done in a well-organi sed way. For instance by writing down a to-do-list on the papers people would be able to know what they should do in the time order. Thi s is especially important for those people who are constantly slacking off.If they don't make plans, they might not get their work done on time."
+            "answer": "为什么设定目标很重要? One of the main reasons is that making plans can ensure that everything can be done in a well-organi sed way. For instance by writing down a to-do-list on the papers people would be able to know what they should do in the time order. Thi s is especially important for those people who are constantly slacking off.If they don't make plans, they might not get their work done on time."
           }
         ]
       },
@@ -1898,7 +1898,7 @@
           },
           {
             "question": "How does advertising affect people?",
-            "answer": "广告是如何影响人们的? Basically advertising can provide people with access to the relevant information about product or service. For instance, people are constantly watching ad s with the purpose of purchasing some trendy clothes. Without the ads, people might find it hard to access the up-to-the-minute information about fashion, whic his especially obvious in the current cyber age in which online ads are almost everywhere. More importantly, ad s might affect people's deci sion-making process intangibly. The truth is that, most ads nowadays are full of entertaining pictures or catchy music, which might look or sound very appealing to the audience and consequently entice the audience to purchase products or service spontaneously. 4.Do advertisements necessarily have famous people, such as celebrities? 请名人来拍广告是必要的吗? Not necessarily. There is no doubt that famous people could promote the sales of the products.We all know that celebrity endorsement is a very widespread social phenomenon that is affecting almost everyone, particularly those young customers who are loyal ta their favorite celebrities. That said, when customers bump into the ads in which their favourite stars are advertising the product, they tend to buy it more impulsi vel y. In this way, the sal es of the product s could be effectively boosted. However, I don't think it is necessarily needed. To some extent, the basic function of ads, which is to provide information for the customers, has nothing to do with celebrities. By that I mean that the presence of celebrities might not be as necessary as we always think of when it comes to considering how to fulill the basis function of the ads. I've even seen some ads which use Al facial technology to replace celebrities, and the results are still good enough."
+            "answer": "广告是如何影响人们的? Basically advertising can provide people with access to the relevant information about product or service. For instance, people are constantly watching ad s with the purpose of purchasing some trendy clothes. Without the ads, people might find it hard to access the up-to-the-minute information about fashion, whic his especially obvious in the current cyber age in which online ads are almost everywhere. More importantly, ad s might affect people's deci sion-making process intangibly. The truth is that, most ads nowadays are full of entertaining pictures or catchy music, which might look or sound very appealing to the audience and consequently entice the audience to purchase products or service spontaneously. 4.Do advertisements necessarily have famous people, such as celebrities?请名人来拍广告是必要的吗? Not necessarily. There is no doubt that famous people could promote the sales of the products.We all know that celebrity endorsement is a very widespread social phenomenon that is affecting almost everyone, particularly those young customers who are loyal ta their favorite celebrities. That said, when customers bump into the ads in which their favourite stars are advertising the product, they tend to buy it more impulsi vel y. In this way, the sal es of the product s could be effectively boosted. However, I don't think it is necessarily needed. To some extent, the basic function of ads, which is to provide information for the customers, has nothing to do with celebrities. By that I mean that the presence of celebrities might not be as necessary as we always think of when it comes to considering how to fulill the basis function of the ads. I've even seen some ads which use Al facial technology to replace celebrities, and the results are still good enough."
           }
         ]
       },
@@ -1914,7 +1914,7 @@
         "part3Questions": [
           {
             "question": "What kinds of competitions do people in your country like? Why?",
-            "answer": "你们国家的人喜欢什么类型的竞赛? 为什么? I guess different people have diferent preferences for competitions Iltis obvious that young people like computer gam e competitions because most of them are addicted to playing online games themselves. Whenever they see such competitions going on, they are always on the edge of their seat. But that is certainly not the case for elde ly who, in my observation, are leaning towards watching music-related competitions. I've seen quite a lot of elderly people who always keep an eye on any music competition s on the music TV channel, particularly those in relation to the classical music."
+            "answer": "你们国家的人喜欢什么类型的竞赛?为什么? I guess different people have diferent preferences for competitions Iltis obvious that young people like computer gam e competitions because most of them are addicted to playing online games themselves. Whenever they see such competitions going on, they are always on the edge of their seat. But that is certainly not the case for elde ly who, in my observation, are leaning towards watching music-related competitions. I've seen quite a lot of elderly people who always keep an eye on any music competition s on the music TV channel, particularly those in relation to the classical music."
           },
           {
             "question": "Are there many sports programmes in your country?",
@@ -1942,11 +1942,11 @@
         "part3Questions": [
           {
             "question": "How have people's shopping habits changed in recent decades?",
-            "answer": "近几十年来， 人们的购物习惯发生了怎样的变化? One of the most striking changes is that more and more people have chosen to shop online rather than in the real shops. The truth is that, in the cybe r age everything can be done so easily online, and for that reason the shopping process could be massively simplif ied. For instance, simply putting the product information in the search engine could lead to number results for the shoppers to consider and compare. I think people living nowadays could truly benefit a lot from the Internet when it comes to shopping."
+            "answer": "近几十年来，人们的购物习惯发生了怎样的变化? One of the most striking changes is that more and more people have chosen to shop online rather than in the real shops. The truth is that, in the cybe r age everything can be done so easily online, and for that reason the shopping process could be massively simplif ied. For instance, simply putting the product information in the search engine could lead to number results for the shoppers to consider and compare. I think people living nowadays could truly benefit a lot from the Internet when it comes to shopping."
           },
           {
             "question": "Do you think shops and shopping malls will disappear in the future?",
-            "answer": "你认为商店和购物中心将来会消失吗? To a large extent I think yes. As I mentioned, the virtual shopping has already gone viral nowadays, which essent ially means that the number s of shopping malls will inevitably decline with lapse of time. You know, the world is being digitalised at an irreversible pace, which means that one have to accept the gradual disappearance of the real shops and try to live with it rather than do anything against it. 3.What are the diff rences between shopping in street market s and in big shopping malls? 逛街和逛大型购物中心有什么不同? One of the main differences is that shopping in street market s enables us to bargain with the vendor over the price of the product, whereas the price is relatively fixed in the shopping malls. And because of that, shopping in the former would normally be disturbing and annoying, while shopping in the l atter is more comfortable and relaxing. How many times we ve been to the street markets and we would usually be surrounded by the bargainin g noises around us, but that is surely not the case when we are shopping in the shopping centers where there is always soothing music going on. 4.What are the diff rences between the shopping habits of different age 不同年龄段的购物习惯有何不同? Generally, I think young people tend to shop impulsively while the elderly might shop more rat ionally. The underlying reasoning behind their difference lies in the fact young people are relatively less experienced in shopping than the old ones. By that I mean that they might simp y buy things on the spur of moment, without considering seriously whether it is truly what they need. But that's not the case when it comes to the elderly, who will rely on their life experience to rationalis e the shopping process, mainly by way of assessing whether they truly nee d it or not. In that sense, the different in terms of the l ife experience will decide the different shopping habits in two age groups."
+            "answer": "你认为商店和购物中心将来会消失吗? To a large extent I think yes. As I mentioned, the virtual shopping has already gone viral nowadays, which essent ially means that the number s of shopping malls will inevitably decline with lapse of time. You know, the world is being digitalised at an irreversible pace, which means that one have to accept the gradual disappearance of the real shops and try to live with it rather than do anything against it. 3.What are the diff rences between shopping in street market s and in big shopping malls?逛街和逛大型购物中心有什么不同? One of the main differences is that shopping in street market s enables us to bargain with the vendor over the price of the product, whereas the price is relatively fixed in the shopping malls. And because of that, shopping in the former would normally be disturbing and annoying, while shopping in the l atter is more comfortable and relaxing. How many times we ve been to the street markets and we would usually be surrounded by the bargainin g noises around us, but that is surely not the case when we are shopping in the shopping centers where there is always soothing music going on. 4.What are the diff rences between the shopping habits of different age 不同年龄段的购物习惯有何不同? Generally, I think young people tend to shop impulsively while the elderly might shop more rat ionally. The underlying reasoning behind their difference lies in the fact young people are relatively less experienced in shopping than the old ones. By that I mean that they might simp y buy things on the spur of moment, without considering seriously whether it is truly what they need. But that's not the case when it comes to the elderly, who will rely on their life experience to rationalis e the shopping process, mainly by way of assessing whether they truly nee d it or not. In that sense, the different in terms of the l ife experience will decide the different shopping habits in two age groups."
           }
         ]
       },
@@ -1968,7 +1968,7 @@
         "part3Questions": [
           {
             "question": "What do you think people like to do when they are old?",
-            "answer": "你认为人们老了以后喜欢做什么? When people are old, their preferences and interests can vary widely. Some may enjoy spending time with family and friends, engaging in hobbies and leisure activities, or traveling. Others may find comfort in quiet pursuits like reading, gardening, or meditation. Man y seniors also appreciate opportunities for continued learning and personal growth, whether through educational cl asses, volunteering, or simply pursuing new interests. Ultimately, What people enjoy doing in their later years depends on their individual personalities, circumstances, and 2.Do you think grandparents can always have a good relationship with their grandchildren? 你认为祖父母通常和孙子孙女关系好吗? Whether grandparents ca n always have a_good relationship with their grandchildren depends on a variety of factors. Fami ly dynamics, communication styles, and individual personalities can all playa role in shaping the relationship. However, there are many benefits to having a close bon d between grandparents and grandchildren, including emotional support, cultural and family history transmission, and the opportunity for intergenerationaI learning. With effort, patience, and open communication, grandparents and grandchildren can cultivate a strong and rewarding relationship."
+            "answer": "你认为人们老了以后喜欢做什么? When people are old, their preferences and interests can vary widely. Some may enjoy spending time with family and friends, engaging in hobbies and leisure activities, or traveling. Others may find comfort in quiet pursuits like reading, gardening, or meditation. Man y seniors also appreciate opportunities for continued learning and personal growth, whether through educational cl asses, volunteering, or simply pursuing new interests. Ultimately, What people enjoy doing in their later years depends on their individual personalities, circumstances, and 2.Do you think grandparents can always have a good relationship with their grandchildren?你认为祖父母通常和孙子孙女关系好吗? Whether grandparents ca n always have a_good relationship with their grandchildren depends on a variety of factors. Fami ly dynamics, communication styles, and individual personalities can all playa role in shaping the relationship. However, there are many benefits to having a close bon d between grandparents and grandchildren, including emotional support, cultural and family history transmission, and the opportunity for intergenerationaI learning. With effort, patience, and open communication, grandparents and grandchildren can cultivate a strong and rewarding relationship."
           },
           {
             "question": "Do you think it is good for children to stay with grandparents?",
@@ -2047,7 +2047,7 @@
           },
           {
             "question": "What are the ways to persuade children in the school?",
-            "answer": "在学校里， 劝告孩子们的方法有哪些? I think it depends on the age of the children. For children in the early chi ldhood, we should persuade them to do some recreational activities. Since young children tend to be curious and passionate about anything that might stimulate their creativity and imagination,teachers should always take them to some recreational places, such as the amusement parks to inspire them to have fun in a way that could give thema spir tual satisfaction. But this is not the case when it comes to the children in the middle childhood. The fact is that, chidren between 7-14 should focus primarily on improving their cognitive ski lls, which is the landmark characteristic of the current Chinese education system. In light of that, teacher s will inspire children to do something which can contribute to their cognitive development, such as pl aying with puzzles. 4. What advice should people listen to? 人们应该听取哪些建议? Absolutely. The di gital age has democratized knowledge acqui sition to an unprecedented degree. While in the past information was confined to books and experts, today anyone with Interne t access can instantly retrieve information on virtually any topic. The sheer volume of available data, coupled with powerful search technologies, enable s people to learn more in minute s than what might have taken days of research in previous eras."
+            "answer": "在学校里，劝告孩子们的方法有哪些? I think it depends on the age of the children. For children in the early chi ldhood, we should persuade them to do some recreational activities. Since young children tend to be curious and passionate about anything that might stimulate their creativity and imagination,teachers should always take them to some recreational places, such as the amusement parks to inspire them to have fun in a way that could give thema spir tual satisfaction. But this is not the case when it comes to the children in the middle childhood. The fact is that, chidren between 7-14 should focus primarily on improving their cognitive ski lls, which is the landmark characteristic of the current Chinese education system. In light of that, teacher s will inspire children to do something which can contribute to their cognitive development, such as pl aying with puzzles. 4. What advice should people listen to?人们应该听取哪些建议? Absolutely. The di gital age has democratized knowledge acqui sition to an unprecedented degree. While in the past information was confined to books and experts, today anyone with Interne t access can instantly retrieve information on virtually any topic. The sheer volume of available data, coupled with powerful search technologies, enable s people to learn more in minute s than what might have taken days of research in previous eras."
           }
         ]
       },
@@ -2079,7 +2079,7 @@
           },
           {
             "question": "When should people wait for something in your country?",
-            "answer": "在中国， 人们什么时候需要等待? I think this question can only be answered on a case-by-case basis. In most cases, people obviously need to wait when there is a long queue, which is especially often the case nowadays. For i nstance, people are often queuing up in some famous tourist attractions. I think this is truly an integral part of the modern hectic life. But in some cases waiting for somet hing mi gh t be the individual's knowingly voluntary deci sion. The truth is that, some people don't like to make deci sions on the spur of the moment; instead, they are leaning towards waiting for further information to show up whereby they could rationalise their decision-making process. Thi s is particularly obvious when they need to make important decisions. So I think when we should wait varies from case to case."
+            "answer": "在中国，人们什么时候需要等待? I think this question can only be answered on a case-by-case basis. In most cases, people obviously need to wait when there is a long queue, which is especially often the case nowadays. For i nstance, people are often queuing up in some famous tourist attractions. I think this is truly an integral part of the modern hectic life. But in some cases waiting for somet hing mi gh t be the individual's knowingly voluntary deci sion. The truth is that, some people don't like to make deci sions on the spur of the moment; instead, they are leaning towards waiting for further information to show up whereby they could rationalise their decision-making process. Thi s is particularly obvious when they need to make important decisions. So I think when we should wait varies from case to case."
           },
           {
             "question": "Is it happier to get something after wai ting?",

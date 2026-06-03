@@ -311,12 +311,12 @@ export function PracticePart23Page() {
               <p className="text-sm font-medium text-gray-800 dark:text-white">{currentPart2.prompt}</p>
             </div>
 
-            {part2Transcript && (
-              <div className="bg-white dark:bg-gray-800 rounded-2xl p-4 border border-gray-200 dark:border-gray-700">
-                <p className="text-xs text-gray-500 mb-1">你的回答</p>
-                <p className="text-sm text-gray-700 dark:text-gray-200 leading-relaxed">{part2Transcript}</p>
-              </div>
-            )}
+            <div className="bg-white dark:bg-gray-800 rounded-2xl p-4 border border-gray-200 dark:border-gray-700">
+              <p className="text-xs text-gray-500 mb-1">我的回答转写</p>
+              <p className="text-sm text-gray-700 dark:text-gray-200 leading-relaxed">
+                {part2Transcript || '未识别到有效转写文本，请重新录音后再评分。'}
+              </p>
+            </div>
 
             <AIFeedbackPanel
               question={currentPart2.prompt}
@@ -400,12 +400,12 @@ export function PracticePart23Page() {
               <p className="text-sm font-medium text-gray-800 dark:text-white">{currentPart3Q.question}</p>
             </div>
 
-            {part3Transcript && (
-              <div className="bg-white dark:bg-gray-800 rounded-2xl p-4 border border-gray-200 dark:border-gray-700">
-                <p className="text-xs text-gray-500 mb-1">你的回答</p>
-                <p className="text-sm text-gray-700 dark:text-gray-200 leading-relaxed">{part3Transcript}</p>
-              </div>
-            )}
+            <div className="bg-white dark:bg-gray-800 rounded-2xl p-4 border border-gray-200 dark:border-gray-700">
+              <p className="text-xs text-gray-500 mb-1">我的回答转写</p>
+              <p className="text-sm text-gray-700 dark:text-gray-200 leading-relaxed">
+                {part3Transcript || '未识别到有效转写文本，请重新录音后再评分。'}
+              </p>
+            </div>
 
             <AIFeedbackPanel
               question={currentPart3Q.question}
