@@ -729,6 +729,9 @@ def apply_fixes(text: str) -> str:
 
     # 清理多余空格
     text = re.sub(r' {2,}', ' ', text).strip()
+    # 修复英文撇号断开与连续问题缺空格
+    text = re.sub(r"\b(I|you|we|they|he|she|it|that|there|who|what|where|when|why|how|don|doesn|didn|can|couldn|shouldn|wouldn|won)'\s+(m|re|ve|ll|d|s|t)\b", r"\1'\2", text, flags=re.IGNORECASE)
+    text = re.sub(r'\?([A-Z])', r'? \1', text)
     # 修复标点前空格
     text = re.sub(r'\s+([?,.])', r'\1', text)
 
